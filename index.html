@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zona Sport Cruceña Camba | Catálogo de Tenis</title>
+
+  <style>
+    :root {
+      --bg-dark: #07110d;
+      --bg-green: #0b2f20;
+      --green: #16a34a;
+      --green-light: #22c55e;
+      --gold: #d4af37;
+      --red: #c1121f;
+      --cream: #f8f5ef;
+      --white: #ffffff;
+      --text: #17201a;
+      --muted: #6b7280;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .topbar {
+      background: var(--bg-dark);
+      color: var(--white);
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .brand-logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), var(--gold));
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 900;
+      border: 2px solid rgba(255,255,255,0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #e5e7eb;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      min-height: 560px;
+      padding: 90px 8%;
+      background:
+        linear-gradient(110deg, rgba(7,17,13,0.96), rgba(11,47,32,0.88), rgba(193,18,31,0.72)),
+        radial-gradient(circle at top right, rgba(212,175,55,0.25), transparent 35%);
+      color: white;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.7rem, 6vw, 5.3rem);
+      line-height: 0.95;
+      margin-bottom: 22px;
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #e5e7eb;
+      max-width: 680px;
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 24px;
+      border-radius: 999px;
+      font-weight: 900;
+      transition: 0.25s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--green-light);
+      color: white;
+      box-shadow: 0 12px 30px rgba(34,197,94,0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: var(--green);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255,255,255,0.28);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.18);
+      backdrop-filter: blur(15px);
+      border-radius: 34px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .shoe-preview {
+      background: linear-gradient(145deg, #111827, #0b2f20);
+      border-radius: 28px;
+      min-height: 320px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(212,175,55,0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .shoe-preview::before {
+      content: "ZONA SPORT";
+      position: absolute;
+      font-size: 4.5rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.04);
+      transform: rotate(-14deg);
+    }
+
+    .shoe-icon {
+      font-size: 7rem;
+      z-index: 2;
+      filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35));
+    }
+
+    .hero-info {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .info-box {
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 14px;
+      text-align: center;
+    }
+
+    .info-box strong {
+      display: block;
+      color: var(--gold);
+      font-size: 1.25rem;
+    }
+
+    .section {
+      padding: 75px 8%;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 38px;
+    }
+
+    .section-header .eyebrow {
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .search-box {
+      margin-bottom: 35px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .search-box input {
+      flex: 1;
+      min-width: 260px;
+      padding: 17px 20px;
+      border-radius: 999px;
+      border: 2px solid #e5e7eb;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .search-box input:focus {
+      border-color: var(--green);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(15,23,42,0.08);
+      transition: 0.25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .product-image {
+      height: 245px;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(212,175,55,0.22), transparent 30%),
+        linear-gradient(145deg, #0f172a, #0b2f20);
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    .product-image span {
+      font-size: 5.5rem;
+      z-index: 2;
+    }
+
+    .product-image::after {
+      content: "";
+      position: absolute;
+      width: 70%;
+      height: 18px;
+      background: rgba(0,0,0,0.25);
+      bottom: 48px;
+      border-radius: 50%;
+      filter: blur(8px);
+    }
+
+    .product-body {
+      padding: 24px;
+    }
+
+    .product-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .badge {
+      background: #dcfce7;
+      color: #166534;
+      font-size: 0.78rem;
+      font-weight: 900;
+      padding: 6px 12px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .product-card h3 {
+      font-size: 1.45rem;
+      line-height: 1.15;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .details {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .details li {
+      display: flex;
+      justify-content: space-between;
+      padding: 9px 0;
+      border-bottom: 1px solid #eef2f7;
+      color: #334155;
+      gap: 14px;
+    }
+
+    .details strong {
+      color: #0f172a;
+    }
+
+    .price {
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: var(--green);
+      margin-bottom: 18px;
+    }
+
+    .reserve-btn {
+      width: 100%;
+      background: var(--bg-dark);
+      color: white;
+      border-radius: 16px;
+      padding: 15px;
+      display: block;
+      text-align: center;
+      font-weight: 900;
+      transition: 0.25s;
+    }
+
+    .reserve-btn:hover {
+      background: var(--green);
+      transform: translateY(-2px);
+    }
+
+    .steps {
+      background: var(--bg-dark);
+      color: white;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
+
+    .step-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 28px;
+      border-radius: 22px;
+    }
+
+    .step-card span {
+      color: var(--gold);
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    .step-card h3 {
+      margin: 12px 0 8px;
+    }
+
+    .step-card p {
+      color: #cbd5e1;
+    }
+
+    .contact {
+      background:
+        linear-gradient(135deg, rgba(11,47,32,0.95), rgba(7,17,13,0.98)),
+        radial-gradient(circle at bottom right, rgba(212,175,55,0.18), transparent 30%);
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: 14px;
+    }
+
+    .contact p {
+      color: #d1d5db;
+      max-width: 720px;
+      margin: 0 auto 28px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .facebook {
+      background: #1877f2;
+      color: white;
+    }
+
+    .qr {
+      background: var(--gold);
+      color: #111827;
+    }
+
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      padding: 25px 8%;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-info {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="topbar">
+    <div class="brand">
+      <div class="brand-logo">ZS</div>
+      <div>
+        <div>ZONA SPORT</div>
+        <small>Cruceña Camba</small>
+      </div>
+    </div>
+
+    <div class="nav-links">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#como-comprar">Cómo comprar</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Tenis originales · Estilo urbano · Bolivia</p>
+      <h1>Tu estilo, <span>tu zona</span>, tu deporte.</h1>
+      <p>
+        Catálogo premium de tenis disponibles para reserva por WhatsApp.
+        Consulta modelos, tallas, colores y confirma tu pedido con QR.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#catalogo">Ver catálogo</a>
+        <a class="btn btn-secondary" href="https://wa.me/59162003756?text=Hola%20quiero%20ver%20el%20cat%C3%A1logo%20de%20Zona%20Sport" target="_blank">
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="shoe-preview">
+        <div class="shoe-icon">👟</div>
+      </div>
+
+      <div class="hero-info">
+        <div class="info-box">
+          <strong>QR</strong>
+          Pagos
+        </div>
+        <div class="info-box">
+          <strong>24/7</strong>
+          WhatsApp
+        </div>
+        <div class="info-box">
+          <strong>100%</strong>
+          Estilo
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="catalogo" class="section">
+    <div class="section-header">
+      <p class="eyebrow">Catálogo disponible</p>
+      <h2>Modelos listos para reservar</h2>
+      <p>
+        Revisa los modelos disponibles. Puedes buscar por marca, modelo, color o talla.
+      </p>
+    </div>
+
+    <div class="search-box">
+      <input id="buscador" type="search" placeholder="Buscar Nike, talla 42, blanco/negro..." />
+    </div>
+
+    <section class="cards-grid" id="productos">
+
+      <article class="product-card" data-search="nike dunk low talla 42 blanco negro urbano">
+        <div class="product-image">
+          <span>👟</span>
+        </div>
+
+        <div class="product-body">
+          <div class="product-top">
+            <div>
+              <h3>Nike Dunk Low</h3>
+              <p class="desc">Tenis original estilo urbano, moderno y combinable.</p>
+            </div>
+            <span class="badge">Disponible</span>
+          </div>
+
+          <ul class="details">
+            <li><strong>Marca:</strong> <span>Nike</span></li>
+            <li><strong>Talla:</strong> <span>42</span></li>
+            <li><strong>Color:</strong> <span>Blanco/negro</span></li>
+            <li><strong>Stock:</strong> <span>2 pares</span></li>
+          </ul>
+
+          <div class="price">750 Bs</div>
+
+          <a class="reserve-btn" href="https://wa.me/59162003756?text=Hola%20quiero%20reservar%20Nike%20Dunk%20Low%20talla%2042" target="_blank">
+            Reservar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <article class="product-card" data-search="adidas samba talla 40 negro casual">
+        <div class="product-image">
+          <span>👞</span>
+        </div>
+
+        <div class="product-body">
+          <div class="product-top">
+            <div>
+              <h3>Adidas Samba</h3>
+              <p class="desc">Modelo clásico casual para uso diario y outfits urbanos.</p>
+            </div>
+            <span class="badge">Próximo</span>
+          </div>
+
+          <ul class="details">
+            <li><strong>Marca:</strong> <span>Adidas</span></li>
+            <li><strong>Talla:</strong> <span>40</span></li>
+            <li><strong>Color:</strong> <span>Negro</span></li>
+            <li><strong>Stock:</strong> <span>Próximamente</span></li>
+          </ul>
+
+          <div class="price">Consultar</div>
+
+          <a class="reserve-btn" href="https://wa.me/59162003756?text=Hola%20quiero%20consultar%20por%20Adidas%20Samba" target="_blank">
+            Consultar disponibilidad
+          </a>
+        </div>
+      </article>
+
+      <article class="product-card" data-search="new balance 574 talla 41 gris casual">
+        <div class="product-image">
+          <span>🥾</span>
+        </div>
+
+        <div class="product-body">
+          <div class="product-top">
+            <div>
+              <h3>New Balance 574</h3>
+              <p class="desc">Comodidad premium para caminar, vestir casual y combinar fácil.</p>
+            </div>
+            <span class="badge">Próximo</span>
+          </div>
+
+          <ul class="details">
+            <li><strong>Marca:</strong> <span>New Balance</span></li>
+            <li><strong>Talla:</strong> <span>41</span></li>
+            <li><strong>Color:</strong> <span>Gris</span></li>
+            <li><strong>Stock:</strong> <span>Próximamente</span></li>
+          </ul>
+
+          <div class="price">Consultar</div>
+
+          <a class="reserve-btn" href="https://wa.me/59162003756?text=Hola%20quiero%20consultar%20por%20New%20Balance%20574" target="_blank">
+            Consultar disponibilidad
+          </a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <section id="como-comprar" class="section steps">
+    <div class="section-header">
+      <p class="eyebrow">Proceso de compra</p>
+      <h2>Reserva fácil y segura</h2>
+      <p>Compra organizada por WhatsApp, registro de pedido y confirmación con QR.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <span>01</span>
+        <h3>Consulta el catálogo</h3>
+        <p>Elige modelo, talla y color disponible.</p>
+      </div>
+
+      <div class="step-card">
+        <span>02</span>
+        <h3>Reserva por WhatsApp</h3>
+        <p>El bot registra tu pedido automáticamente.</p>
+      </div>
+
+      <div class="step-card">
+        <span>03</span>
+        <h3>Confirma con QR</h3>
+        <p>Recibe el QR de pago y envía tu comprobante.</p>
+      </div>
+
+      <div class="step-card">
+        <span>04</span>
+        <h3>Coordinamos entrega</h3>
+        <p>Un asesor confirma tu reserva y coordina la entrega.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section contact">
+    <h2>Contacto y redes sociales</h2>
+    <p>
+      Síguenos en Facebook y escríbenos por WhatsApp para consultar modelos,
+      reservas, tallas, precios y entregas.
+    </p>
+
+    <div class="contact-buttons">
+      <a class="btn btn-primary" href="https://wa.me/59162003756?text=Hola%20Zona%20Sport%2C%20quiero%20informaci%C3%B3n%20del%20cat%C3%A1logo" target="_blank">
+        WhatsApp
+      </a>
+
+      <a class="btn facebook" href="https://www.facebook.com/profile.php?id=61591109313794" target="_blank">
+        Facebook
+      </a>
+
+      <a class="btn qr" href="https://raw.githubusercontent.com/luizagasamuel-a11y/TENIS-BO/main/qr_zona_sport_bnb.jpg" target="_blank">
+        Ver QR de pago
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    Zona Sport Cruceña Camba © 2026 · Tenis originales · Reservas por WhatsApp · Pagos QR
+  </footer>
+
+  <script>
+    const buscador = document.getElementById("buscador");
+    const productos = document.querySelectorAll(".product-card");
+
+    buscador.addEventListener("input", () => {
+      const texto = buscador.value.toLowerCase().trim();
+
+      productos.forEach(producto => {
+        const contenido = producto.dataset.search.toLowerCase();
+        producto.style.display = contenido.includes(texto) ? "block" : "none";
+      });
+    });
+  </script>
+
+</body>
+</html>
