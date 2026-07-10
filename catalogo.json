@@ -1,0 +1,13 @@
+[
+  {
+    "marca": "Nike",
+    "modelo": "Dunk Low",
+    "talla": "42",
+    "color": "Blanco/negro",
+    "precio_bs": 750,
+    "stock": 2,
+    "estado": "Disponible",
+    "descripcion": "Tenis original estilo urbano, moderno y combinable.",
+    "imagen": "👟"
+  }
+]
