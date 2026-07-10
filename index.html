@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zona Sport Cruceña Camba | Catálogo de Tenis</title>
+  <title>Zona Sport Cruceña Camba | Catálogo Oficial</title>
 
   <style>
     :root {
-      --bg-dark: #07110d;
-      --bg-green: #0b2f20;
+      --black: #07110d;
+      --dark-green: #0b2f20;
       --green: #16a34a;
       --green-light: #22c55e;
       --gold: #d4af37;
@@ -27,6 +27,10 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: var(--cream);
@@ -39,7 +43,7 @@
     }
 
     .topbar {
-      background: var(--bg-dark);
+      background: var(--black);
       color: var(--white);
       padding: 16px 8%;
       display: flex;
@@ -68,7 +72,13 @@
       place-items: center;
       color: white;
       font-weight: 900;
-      border: 2px solid rgba(255,255,255,0.25);
+      border: 2px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .brand small {
+      color: #cbd5e1;
+      font-weight: 700;
+      letter-spacing: 0;
     }
 
     .nav-links {
@@ -228,7 +238,7 @@
     }
 
     .section-header {
-      max-width: 760px;
+      max-width: 780px;
       margin-bottom: 38px;
     }
 
@@ -296,11 +306,21 @@
       display: grid;
       place-items: center;
       position: relative;
+      overflow: hidden;
     }
 
     .product-image span {
       font-size: 5.5rem;
       z-index: 2;
+    }
+
+    .product-image img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      z-index: 2;
+      filter: drop-shadow(0 20px 20px rgba(0,0,0,0.35));
+      border-radius: 18px;
     }
 
     .product-image::after {
@@ -376,7 +396,7 @@
 
     .reserve-btn {
       width: 100%;
-      background: var(--bg-dark);
+      background: var(--black);
       color: white;
       border-radius: 16px;
       padding: 15px;
@@ -391,8 +411,18 @@
       transform: translateY(-2px);
     }
 
+    .empty-message {
+      grid-column: 1 / -1;
+      background: white;
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
     .steps {
-      background: var(--bg-dark);
+      background: var(--black);
       color: white;
     }
 
@@ -544,7 +574,7 @@
 
   <main id="catalogo" class="section">
     <div class="section-header">
-      <p class="eyebrow">Catálogo disponible</p>
+      <p class="eyebrow">Catálogo oficial</p>
       <h2>Modelos listos para reservar</h2>
       <p>
         Revisa los modelos disponibles. Puedes buscar por marca, modelo, color o talla.
@@ -555,96 +585,7 @@
       <input id="buscador" type="search" placeholder="Buscar Nike, talla 42, blanco/negro..." />
     </div>
 
-    <section class="cards-grid" id="productos">
-
-      <article class="product-card" data-search="nike dunk low talla 42 blanco negro urbano">
-        <div class="product-image">
-          <span>👟</span>
-        </div>
-
-        <div class="product-body">
-          <div class="product-top">
-            <div>
-              <h3>Nike Dunk Low</h3>
-              <p class="desc">Tenis original estilo urbano, moderno y combinable.</p>
-            </div>
-            <span class="badge">Disponible</span>
-          </div>
-
-          <ul class="details">
-            <li><strong>Marca:</strong> <span>Nike</span></li>
-            <li><strong>Talla:</strong> <span>42</span></li>
-            <li><strong>Color:</strong> <span>Blanco/negro</span></li>
-            <li><strong>Stock:</strong> <span>2 pares</span></li>
-          </ul>
-
-          <div class="price">750 Bs</div>
-
-          <a class="reserve-btn" href="https://wa.me/59162003756?text=Hola%20quiero%20reservar%20Nike%20Dunk%20Low%20talla%2042" target="_blank">
-            Reservar por WhatsApp
-          </a>
-        </div>
-      </article>
-
-      <article class="product-card" data-search="adidas samba talla 40 negro casual">
-        <div class="product-image">
-          <span>👞</span>
-        </div>
-
-        <div class="product-body">
-          <div class="product-top">
-            <div>
-              <h3>Adidas Samba</h3>
-              <p class="desc">Modelo clásico casual para uso diario y outfits urbanos.</p>
-            </div>
-            <span class="badge">Próximo</span>
-          </div>
-
-          <ul class="details">
-            <li><strong>Marca:</strong> <span>Adidas</span></li>
-            <li><strong>Talla:</strong> <span>40</span></li>
-            <li><strong>Color:</strong> <span>Negro</span></li>
-            <li><strong>Stock:</strong> <span>Próximamente</span></li>
-          </ul>
-
-          <div class="price">Consultar</div>
-
-          <a class="reserve-btn" href="https://wa.me/59162003756?text=Hola%20quiero%20consultar%20por%20Adidas%20Samba" target="_blank">
-            Consultar disponibilidad
-          </a>
-        </div>
-      </article>
-
-      <article class="product-card" data-search="new balance 574 talla 41 gris casual">
-        <div class="product-image">
-          <span>🥾</span>
-        </div>
-
-        <div class="product-body">
-          <div class="product-top">
-            <div>
-              <h3>New Balance 574</h3>
-              <p class="desc">Comodidad premium para caminar, vestir casual y combinar fácil.</p>
-            </div>
-            <span class="badge">Próximo</span>
-          </div>
-
-          <ul class="details">
-            <li><strong>Marca:</strong> <span>New Balance</span></li>
-            <li><strong>Talla:</strong> <span>41</span></li>
-            <li><strong>Color:</strong> <span>Gris</span></li>
-            <li><strong>Stock:</strong> <span>Próximamente</span></li>
-          </ul>
-
-          <div class="price">Consultar</div>
-
-          <a class="reserve-btn" href="https://wa.me/59162003756?text=Hola%20quiero%20consultar%20por%20New%20Balance%20574" target="_blank">
-            Consultar disponibilidad
-          </a>
-        </div>
-      </article>
-
-    </section>
+    <section class="cards-grid" id="productos"></section>
   </main>
 
   <section id="como-comprar" class="section steps">
@@ -709,16 +650,128 @@
 
   <script>
     const buscador = document.getElementById("buscador");
-    const productos = document.querySelectorAll(".product-card");
+    const contenedor = document.getElementById("productos");
+
+    let productosData = [];
+
+    async function cargarCatalogo() {
+      try {
+        const respuesta = await fetch("catalogo.json");
+
+        if (!respuesta.ok) {
+          throw new Error("No se encontró catalogo.json");
+        }
+
+        productosData = await respuesta.json();
+        mostrarProductos(productosData);
+      } catch (error) {
+        contenedor.innerHTML = `
+          <div class="empty-message">
+            No se pudo cargar el catálogo. Revisa que el archivo <strong>catalogo.json</strong> esté subido correctamente.
+          </div>
+        `;
+        console.error("Error cargando catálogo:", error);
+      }
+    }
+
+    function esImagen(url) {
+      if (!url) return false;
+      return url.startsWith("http") || url.endsWith(".jpg") || url.endsWith(".jpeg") || url.endsWith(".png") || url.endsWith(".webp");
+    }
+
+    function mostrarProductos(productos) {
+      contenedor.innerHTML = "";
+
+      if (!productos || productos.length === 0) {
+        contenedor.innerHTML = `
+          <div class="empty-message">
+            No encontramos productos con esa búsqueda. Escríbenos por WhatsApp para ayudarte.
+          </div>
+        `;
+        return;
+      }
+
+      productos.forEach(producto => {
+        const marca = producto.marca || "";
+        const modelo = producto.modelo || "";
+        const talla = producto.talla || "";
+        const color = producto.color || "";
+        const precio = producto.precio_bs || "Consultar";
+        const stock = producto.stock ?? "Consultar";
+        const estado = producto.estado || "Disponible";
+        const descripcion = producto.descripcion || "Tenis disponible en catálogo.";
+        const imagen = producto.imagen || "👟";
+
+        const textoWhatsApp = encodeURIComponent(
+          `Hola quiero reservar ${marca} ${modelo} talla ${talla}`
+        );
+
+        const imagenHTML = esImagen(imagen)
+          ? `<img src="${imagen}" alt="${marca} ${modelo}">`
+          : `<span>${imagen}</span>`;
+
+        const card = document.createElement("article");
+        card.className = "product-card";
+        card.dataset.search = `
+          ${marca}
+          ${modelo}
+          ${talla}
+          ${color}
+          ${estado}
+          ${descripcion}
+        `.toLowerCase();
+
+        card.innerHTML = `
+          <div class="product-image">
+            ${imagenHTML}
+          </div>
+
+          <div class="product-body">
+            <div class="product-top">
+              <div>
+                <h3>${marca} ${modelo}</h3>
+                <p class="desc">${descripcion}</p>
+              </div>
+              <span class="badge">${estado}</span>
+            </div>
+
+            <ul class="details">
+              <li><strong>Marca:</strong> <span>${marca}</span></li>
+              <li><strong>Talla:</strong> <span>${talla}</span></li>
+              <li><strong>Color:</strong> <span>${color}</span></li>
+              <li><strong>Stock:</strong> <span>${stock} pares</span></li>
+            </ul>
+
+            <div class="price">${precio} Bs</div>
+
+            <a class="reserve-btn" href="https://wa.me/59162003756?text=${textoWhatsApp}" target="_blank">
+              Reservar por WhatsApp
+            </a>
+          </div>
+        `;
+
+        contenedor.appendChild(card);
+      });
+    }
 
     buscador.addEventListener("input", () => {
       const texto = buscador.value.toLowerCase().trim();
 
-      productos.forEach(producto => {
-        const contenido = producto.dataset.search.toLowerCase();
-        producto.style.display = contenido.includes(texto) ? "block" : "none";
+      const filtrados = productosData.filter(producto => {
+        return `
+          ${producto.marca}
+          ${producto.modelo}
+          ${producto.talla}
+          ${producto.color}
+          ${producto.estado}
+          ${producto.descripcion}
+        `.toLowerCase().includes(texto);
       });
+
+      mostrarProductos(filtrados);
     });
+
+    cargarCatalogo();
   </script>
 
 </body>
