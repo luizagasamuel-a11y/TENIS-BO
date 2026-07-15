@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Zona Sport Cruceña Camba | Catálogo</title>
 
   <style>
@@ -29,7 +30,7 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     }
 
     .logo-box {
@@ -49,7 +50,7 @@
       color: white;
       font-weight: 900;
       font-size: 28px;
-      border: 3px solid rgba(255,255,255,0.25);
+      border: 3px solid rgba(255, 255, 255, 0.25);
     }
 
     .logo-text h1 {
@@ -68,6 +69,7 @@
     nav {
       display: flex;
       gap: 34px;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -141,20 +143,20 @@
     }
 
     .btn-secondary {
-      border: 2px solid rgba(255,255,255,0.45);
+      border: 2px solid rgba(255, 255, 255, 0.45);
       color: white;
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     }
 
     .hero-card {
       border-radius: 48px;
       padding: 42px;
-      background: rgba(255,255,255,0.11);
-      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255, 255, 255, 0.11);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       backdrop-filter: blur(8px);
     }
 
@@ -174,7 +176,7 @@
       position: absolute;
       font-size: 72px;
       font-weight: 900;
-      color: rgba(255,255,255,0.04);
+      color: rgba(255, 255, 255, 0.04);
       transform: rotate(-13deg);
     }
 
@@ -183,8 +185,9 @@
       max-height: 88%;
       object-fit: contain;
       z-index: 2;
-      filter: drop-shadow(0 18px 26px rgba(0,0,0,0.45));
+      filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.45));
       border-radius: 18px;
+      background: white;
     }
 
     .hero-icon {
@@ -200,7 +203,7 @@
     }
 
     .stat {
-      background: rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.12);
       border-radius: 22px;
       padding: 22px;
       text-align: center;
@@ -249,38 +252,39 @@
       background: white;
       border-radius: 30px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
       transition: 0.25s;
-      border: 1px solid rgba(0,0,0,0.05);
+      border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .producto-card:hover {
       transform: translateY(-7px);
-      box-shadow: 0 18px 38px rgba(0,0,0,0.18);
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
     }
 
     .producto-img-box {
       height: 320px;
-      background: linear-gradient(135deg, #081421, #07341f);
+      background: #f7f7f7;
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
       position: relative;
+      border-bottom: 1px solid #eeeeee;
     }
 
     .producto-img-box img {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      background: #f7f7f7;
       padding: 10px;
       display: block;
+      background: #f7f7f7;
     }
 
     .emoji-fallback {
       font-size: 88px;
-      color: white;
+      color: #7057c8;
     }
 
     .producto-info {
@@ -332,7 +336,7 @@
       grid-template-columns: 1fr;
       gap: 8px;
       margin-bottom: 18px;
-      color: #333;
+      color: #333333;
       font-size: 16px;
     }
 
@@ -377,6 +381,11 @@
       background: #1db954;
     }
 
+    .whatsapp-btn.disabled {
+      background: #999999;
+      pointer-events: none;
+    }
+
     .como-comprar {
       background: #06120d;
       color: white;
@@ -390,11 +399,11 @@
     }
 
     .paso {
-      background: rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 26px;
       padding: 30px;
       text-align: center;
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .paso-num {
@@ -444,6 +453,7 @@
       text-align: center;
       max-width: 900px;
       margin: 30px auto;
+      line-height: 1.5;
     }
 
     @media (max-width: 1050px) {
@@ -473,7 +483,6 @@
 
       nav {
         gap: 18px;
-        flex-wrap: wrap;
         justify-content: center;
       }
 
@@ -623,8 +632,8 @@
     const WHATSAPP = "59162003756";
 
     const archivosCatalogo = [
-      "catálogo.json",
-      "catalogo.json"
+      "catalogo.json",
+      "catálogo.json"
     ];
 
     function limpiarTexto(valor) {
@@ -658,9 +667,9 @@
       }
 
       return `
-        <img 
-          src="${imagen}" 
-          alt="${alt}" 
+        <img
+          src="${imagen}"
+          alt="${alt}"
           loading="lazy"
           onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;emoji-fallback&quot;>👟</div>';"
         >
@@ -668,7 +677,7 @@
     }
 
     function mensajeWhatsApp(producto) {
-      const texto = 
+      const texto =
 `Hola Zona Sport, quiero reservar este modelo:
 
 Marca: ${producto.marca}
@@ -684,15 +693,22 @@ Precio: ${producto.precio_bs} Bs
 
     function crearCard(producto) {
       const estado = normalizarEstado(producto.estado);
-      const claseEstado = estado.includes("vendido") || estado.includes("agotado") || estado.includes("retirado")
+
+      const noDisponible =
+        estado.includes("vendido") ||
+        estado.includes("agotado") ||
+        estado.includes("retirado") ||
+        Number(producto.stock || 0) <= 0;
+
+      const claseEstado = noDisponible
         ? "estado vendido"
         : "estado";
 
-      const disponible = !(estado.includes("vendido") || estado.includes("agotado") || estado.includes("retirado"));
+      const textoEstado = limpiarTexto(producto.estado) || "Disponible";
 
-      const boton = disponible
-        ? `<a class="whatsapp-btn" href="${mensajeWhatsApp(producto)}" target="_blank">Reservar por WhatsApp</a>`
-        : `<a class="whatsapp-btn" style="background:#999; pointer-events:none;">No disponible</a>`;
+      const boton = noDisponible
+        ? `<a class="whatsapp-btn disabled">No disponible</a>`
+        : `<a class="whatsapp-btn" href="${mensajeWhatsApp(producto)}" target="_blank">Reservar por WhatsApp</a>`;
 
       return `
         <article class="producto-card">
@@ -703,7 +719,7 @@ Precio: ${producto.precio_bs} Bs
           <div class="producto-info">
             <div class="producto-head">
               <h3>${limpiarTexto(producto.marca)} ${limpiarTexto(producto.modelo)}</h3>
-              <span class="${claseEstado}">${limpiarTexto(producto.estado) || "Disponible"}</span>
+              <span class="${claseEstado}">${textoEstado}</span>
             </div>
 
             <p class="descripcion">${limpiarTexto(producto.descripcion)}</p>
@@ -763,8 +779,8 @@ Precio: ${producto.precio_bs} Bs
       const imagen = rutaImagen(productoConImagen.imagen);
 
       hero.innerHTML = `
-        <img 
-          src="${imagen}" 
+        <img
+          src="${imagen}"
           alt="${productoConImagen.marca} ${productoConImagen.modelo}"
           onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;hero-icon&quot;>👟</div>';"
         >
@@ -792,8 +808,8 @@ Precio: ${producto.precio_bs} Bs
 
         errorBox.innerHTML = `
           <div class="error-box">
-            No se pudo cargar el catálogo. Revisa que exista el archivo 
-            <strong>catálogo.json</strong> o <strong>catalogo.json</strong> 
+            No se pudo cargar el catálogo. Revisa que exista el archivo
+            <strong>catalogo.json</strong> o <strong>catálogo.json</strong>
             y que las imágenes estén subidas en la raíz del repositorio.
           </div>
         `;
