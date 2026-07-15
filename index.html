@@ -1,514 +1,349 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zona Sport Cruceña Camba | Catálogo Oficial</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zona Sport Cruceña Camba | Catálogo</title>
 
   <style>
-    :root {
-      --black: #07110d;
-      --dark-green: #0b2f20;
-      --green: #16a34a;
-      --green-light: #22c55e;
-      --gold: #d4af37;
-      --red: #c1121f;
-      --cream: #f8f5ef;
-      --white: #ffffff;
-      --text: #17201a;
-      --muted: #6b7280;
-      --shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
-      --radius: 24px;
-    }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.6;
+      background: #f4f1eb;
+      color: #06120d;
     }
 
-    a {
-      text-decoration: none;
-    }
-
-    .topbar {
-      background: var(--black);
-      color: var(--white);
-      padding: 16px 8%;
+    header {
+      background: #03110b;
+      color: white;
+      padding: 18px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: sticky;
       top: 0;
-      z-index: 100;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+      z-index: 20;
     }
 
-    .brand {
+    .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      letter-spacing: 1px;
+      gap: 16px;
     }
 
-    .brand-logo {
-      width: 46px;
-      height: 46px;
+    .logo-circle {
+      width: 62px;
+      height: 62px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--green), var(--gold));
-      display: grid;
-      place-items: center;
-      color: white;
-      font-weight: 900;
-      border: 2px solid rgba(255, 255, 255, 0.25);
-    }
-
-    .brand small {
-      color: #cbd5e1;
-      font-weight: 700;
-      letter-spacing: 0;
-    }
-
-    .nav-links {
+      background: linear-gradient(135deg, #2abf5a, #e2c83a);
       display: flex;
-      gap: 22px;
+      justify-content: center;
       align-items: center;
+      font-weight: 900;
+      font-size: 28px;
+      color: white;
     }
 
-    .nav-links a {
-      color: #e5e7eb;
-      font-weight: 700;
-      font-size: 0.95rem;
+    .logo h1 {
+      font-size: 28px;
+      letter-spacing: 4px;
     }
 
-    .nav-links a:hover {
-      color: var(--gold);
+    .logo p {
+      color: #d8d8d8;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
     }
 
     .hero {
-      min-height: 560px;
-      padding: 90px 8%;
-      background:
-        linear-gradient(110deg, rgba(7,17,13,0.96), rgba(11,47,32,0.88), rgba(193,18,31,0.72)),
-        radial-gradient(circle at top right, rgba(212,175,55,0.25), transparent 35%);
+      background: linear-gradient(120deg, #062014, #244b38, #a25a55);
       color: white;
+      padding: 70px 7%;
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 50px;
+      gap: 40px;
       align-items: center;
     }
 
-    .eyebrow {
-      color: var(--gold);
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 5px;
+    .hero small {
+      display: block;
+      color: #e2c83a;
+      letter-spacing: 9px;
+      font-size: 18px;
       font-weight: 900;
-      margin-bottom: 18px;
+      margin-bottom: 28px;
     }
 
-    .hero h1 {
-      font-size: clamp(2.7rem, 6vw, 5.3rem);
-      line-height: 0.95;
-      margin-bottom: 22px;
+    .hero h2 {
+      font-size: 72px;
+      line-height: 1.05;
       font-weight: 900;
     }
 
-    .hero h1 span {
-      color: var(--gold);
+    .hero h2 span {
+      color: #e2c83a;
     }
 
     .hero p {
-      font-size: 1.15rem;
-      color: #e5e7eb;
-      max-width: 680px;
-      margin-bottom: 34px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 15px 24px;
-      border-radius: 999px;
-      font-weight: 900;
-      transition: 0.25s ease;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: var(--green-light);
-      color: white;
-      box-shadow: 0 12px 30px rgba(34,197,94,0.35);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      background: var(--green);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: white;
-      border: 2px solid rgba(255,255,255,0.28);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-      transform: translateY(-3px);
+      font-size: 24px;
+      line-height: 1.5;
+      margin-top: 28px;
     }
 
     .hero-card {
-      background: rgba(255,255,255,0.09);
-      border: 1px solid rgba(255,255,255,0.18);
-      backdrop-filter: blur(15px);
-      border-radius: 34px;
-      padding: 28px;
-      box-shadow: var(--shadow);
+      background: rgba(255,255,255,0.12);
+      border-radius: 40px;
+      padding: 36px;
+      border: 1px solid rgba(255,255,255,0.2);
     }
 
-    .shoe-preview {
-      background: linear-gradient(145deg, #111827, #0b2f20);
+    .hero-card img {
+      width: 100%;
+      height: 360px;
+      object-fit: contain;
+      background: #f7f7f7;
       border-radius: 28px;
-      min-height: 320px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(212,175,55,0.35);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .shoe-preview::before {
-      content: "ZONA SPORT";
-      position: absolute;
-      font-size: 4.5rem;
-      font-weight: 900;
-      color: rgba(255,255,255,0.04);
-      transform: rotate(-14deg);
-    }
-
-    .shoe-icon {
-      font-size: 7rem;
-      z-index: 2;
-      filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35));
-    }
-
-    .hero-info {
-      margin-top: 22px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-
-    .info-box {
-      background: rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 14px;
-      text-align: center;
-    }
-
-    .info-box strong {
-      display: block;
-      color: var(--gold);
-      font-size: 1.25rem;
+      padding: 12px;
     }
 
     .section {
-      padding: 75px 8%;
+      padding: 70px 7%;
     }
 
-    .section-header {
-      max-width: 780px;
-      margin-bottom: 38px;
+    .title {
+      text-align: center;
+      margin-bottom: 45px;
     }
 
-    .section-header .eyebrow {
-      color: var(--green);
-      margin-bottom: 10px;
+    .title h2 {
+      font-size: 46px;
+      font-weight: 900;
     }
 
-    .section-header h2 {
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      line-height: 1.1;
-      margin-bottom: 12px;
+    .title p {
+      font-size: 20px;
+      color: #5b6570;
+      margin-top: 10px;
     }
 
-    .section-header p {
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .search-box {
-      margin-bottom: 35px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .search-box input {
-      flex: 1;
-      min-width: 260px;
-      padding: 17px 20px;
-      border-radius: 999px;
-      border: 2px solid #e5e7eb;
-      outline: none;
-      font-size: 1rem;
-    }
-
-    .search-box input:focus {
-      border-color: var(--green);
-    }
-
-    .cards-grid {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 34px;
     }
 
-    .product-card {
+    .card {
       background: white;
-      border-radius: var(--radius);
+      border-radius: 30px;
       overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(15,23,42,0.08);
-      transition: 0.25s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      border: 1px solid rgba(0,0,0,0.06);
     }
 
-    .product-card:hover {
-      transform: translateY(-8px);
+    .image-box {
+      height: 320px;
+      background: #f7f7f7;
+      border-bottom: 1px solid #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .product-image {
-      height: 245px;
-      background:
-        radial-gradient(circle at 30% 20%, rgba(212,175,55,0.22), transparent 30%),
-        linear-gradient(145deg, #0f172a, #0b2f20);
-      display: grid;
-      place-items: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .product-image span {
-      font-size: 5.5rem;
-      z-index: 2;
-    }
-
-    .product-image img {
-      max-width: 90%;
-      max-height: 90%;
+    .image-box img {
+      width: 100%;
+      height: 100%;
       object-fit: contain;
-      z-index: 2;
-      filter: drop-shadow(0 20px 20px rgba(0,0,0,0.35));
-      border-radius: 18px;
+      padding: 10px;
     }
 
-    .product-image::after {
-      content: "";
-      position: absolute;
-      width: 70%;
-      height: 18px;
-      background: rgba(0,0,0,0.25);
-      bottom: 48px;
-      border-radius: 50%;
-      filter: blur(8px);
+    .info {
+      padding: 28px;
     }
 
-    .product-body {
-      padding: 24px;
-    }
-
-    .product-top {
+    .head {
       display: flex;
       justify-content: space-between;
-      gap: 12px;
       align-items: flex-start;
-      margin-bottom: 10px;
+      gap: 15px;
+      margin-bottom: 16px;
     }
 
-    .badge {
-      background: #dcfce7;
-      color: #166534;
-      font-size: 0.78rem;
+    .head h3 {
+      font-size: 25px;
+      line-height: 1.2;
+      color: #04111f;
+    }
+
+    .estado {
+      background: #d9fce5;
+      color: #076b2d;
+      padding: 9px 15px;
+      border-radius: 20px;
       font-weight: 900;
-      padding: 6px 12px;
-      border-radius: 999px;
       white-space: nowrap;
     }
 
-    .product-card h3 {
-      font-size: 1.45rem;
-      line-height: 1.15;
-      color: #0f172a;
-      margin-bottom: 8px;
-    }
-
     .desc {
-      color: var(--muted);
-      font-size: 0.95rem;
+      color: #5e6976;
+      font-size: 17px;
+      line-height: 1.45;
+      min-height: 100px;
       margin-bottom: 18px;
     }
 
-    .details {
-      list-style: none;
-      margin-bottom: 20px;
+    .detail {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 18px;
     }
 
-    .details li {
+    .price-row {
+      border-top: 1px solid #ececec;
+      padding-top: 18px;
       display: flex;
       justify-content: space-between;
-      padding: 9px 0;
-      border-bottom: 1px solid #eef2f7;
-      color: #334155;
-      gap: 14px;
-    }
-
-    .details strong {
-      color: #0f172a;
+      align-items: center;
+      margin-bottom: 22px;
     }
 
     .price {
-      font-size: 1.9rem;
+      font-size: 28px;
+      color: #0b6b35;
       font-weight: 900;
-      color: var(--green);
-      margin-bottom: 18px;
     }
 
-    .reserve-btn {
-      width: 100%;
-      background: var(--black);
-      color: white;
-      border-radius: 16px;
-      padding: 15px;
+    .stock {
+      color: #5e6976;
+      font-weight: bold;
+    }
+
+    .btn {
       display: block;
+      width: 100%;
+      background: #25d366;
+      color: white;
+      padding: 15px;
       text-align: center;
+      text-decoration: none;
+      border-radius: 18px;
       font-weight: 900;
-      transition: 0.25s;
-    }
-
-    .reserve-btn:hover {
-      background: var(--green);
-      transform: translateY(-2px);
-    }
-
-    .empty-message {
-      grid-column: 1 / -1;
-      background: white;
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      color: var(--muted);
-      font-size: 1.1rem;
+      font-size: 17px;
     }
 
     .steps {
-      background: var(--black);
+      background: #06120d;
       color: white;
     }
 
     .steps-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 40px;
     }
 
-    .step-card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
+    .step {
+      background: rgba(255,255,255,0.08);
       padding: 28px;
-      border-radius: 22px;
-    }
-
-    .step-card span {
-      color: var(--gold);
-      font-size: 2rem;
-      font-weight: 900;
-    }
-
-    .step-card h3 {
-      margin: 12px 0 8px;
-    }
-
-    .step-card p {
-      color: #cbd5e1;
-    }
-
-    .contact {
-      background:
-        linear-gradient(135deg, rgba(11,47,32,0.95), rgba(7,17,13,0.98)),
-        radial-gradient(circle at bottom right, rgba(212,175,55,0.18), transparent 30%);
-      color: white;
+      border-radius: 24px;
       text-align: center;
     }
 
-    .contact h2 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      margin-bottom: 14px;
-    }
-
-    .contact p {
-      color: #d1d5db;
-      max-width: 720px;
-      margin: 0 auto 28px;
-    }
-
-    .contact-buttons {
-      display: flex;
+    .step strong {
+      display: inline-flex;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #e2c83a;
+      color: #06120d;
+      align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 25px;
+      font-size: 24px;
+      margin-bottom: 15px;
     }
 
-    .facebook {
-      background: #1877f2;
-      color: white;
+    .step h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
     }
 
-    .qr {
-      background: var(--gold);
-      color: #111827;
+    .step p {
+      color: #d8d8d8;
+      line-height: 1.4;
     }
 
     footer {
-      background: #020617;
-      color: #94a3b8;
-      padding: 25px 8%;
+      background: #020806;
+      color: white;
       text-align: center;
-      font-size: 0.9rem;
+      padding: 32px 7%;
     }
 
-    @media (max-width: 850px) {
+    footer p {
+      color: #d8d8d8;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 1050px) {
       .hero {
         grid-template-columns: 1fr;
-        padding-top: 70px;
       }
 
-      .nav-links {
-        display: none;
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .hero-info {
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h2 {
+        font-size: 56px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero h2 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 19px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -517,262 +352,262 @@
 
 <body>
 
-  <nav class="topbar">
-    <div class="brand">
-      <div class="brand-logo">ZS</div>
+  <header>
+    <div class="logo">
+      <div class="logo-circle">ZS</div>
       <div>
-        <div>ZONA SPORT</div>
-        <small>Cruceña Camba</small>
+        <h1>ZONA SPORT</h1>
+        <p>Cruceña Camba</p>
       </div>
     </div>
 
-    <div class="nav-links">
+    <nav>
       <a href="#catalogo">Catálogo</a>
-      <a href="#como-comprar">Cómo comprar</a>
+      <a href="#comprar">Cómo comprar</a>
       <a href="#contacto">Contacto</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <header class="hero">
+  <section class="hero">
     <div>
-      <p class="eyebrow">Tenis originales · Estilo urbano · Bolivia</p>
-      <h1>Tu estilo, <span>tu zona</span>, tu deporte.</h1>
+      <small>TENIS ORIGINALES · ESTILO URBANO · BOLIVIA</small>
+      <h2>Tu estilo, <span>tu zona</span>, tu deporte.</h2>
       <p>
         Catálogo premium de tenis disponibles para reserva por WhatsApp.
         Consulta modelos, tallas, colores y confirma tu pedido con QR.
       </p>
-
-      <div class="hero-buttons">
-        <a class="btn btn-primary" href="#catalogo">Ver catálogo</a>
-        <a class="btn btn-secondary" href="https://wa.me/59162003756?text=Hola%20quiero%20ver%20el%20cat%C3%A1logo%20de%20Zona%20Sport" target="_blank">
-          Consultar por WhatsApp
-        </a>
-      </div>
     </div>
 
     <div class="hero-card">
-      <div class="shoe-preview">
-        <div class="shoe-icon">👟</div>
-      </div>
-
-      <div class="hero-info">
-        <div class="info-box">
-          <strong>QR</strong>
-          Pagos
-        </div>
-        <div class="info-box">
-          <strong>24/7</strong>
-          WhatsApp
-        </div>
-        <div class="info-box">
-          <strong>100%</strong>
-          Estilo
-        </div>
-      </div>
+      <img src="nike_blazer_mid77_shang.png" alt="Nike Blazer Mid 77">
     </div>
-  </header>
+  </section>
 
-  <main id="catalogo" class="section">
-    <div class="section-header">
-      <p class="eyebrow">Catálogo oficial</p>
-      <h2>Modelos listos para reservar</h2>
-      <p>
-        Revisa los modelos disponibles. Puedes buscar por marca, modelo, color o talla.
-      </p>
+  <section class="section" id="catalogo">
+    <div class="title">
+      <h2>Catálogo disponible</h2>
+      <p>Modelos seleccionados para reserva inmediata.</p>
     </div>
 
-    <div class="search-box">
-      <input id="buscador" type="search" placeholder="Buscar Nike, talla 42, blanco/negro..." />
+    <div class="grid">
+
+      <article class="card">
+        <div class="image-box">
+          <img src="nike_blazer_mid77_shang.png" alt="Nike Blazer Mid 77 Shanghai Pack">
+        </div>
+        <div class="info">
+          <div class="head">
+            <h3>Nike Blazer Mid 77 Shanghai Pack</h3>
+            <span class="estado">Disponible</span>
+          </div>
+          <p class="desc">Tenis Nike Blazer de caña alta, estilo urbano premium, diseño multicolor con doble swoosh. Modelo identificado por etiqueta DC3278-280.</p>
+          <div class="detail">
+            <p><strong>Talla:</strong> EUR 44.5 / US 10.5 / CM 28.5</p>
+            <p><strong>Color:</strong> Plomo claro / verde menta / azul / naranja</p>
+          </div>
+          <div class="price-row">
+            <span class="price">250 Bs</span>
+            <span class="stock">Stock: 1</span>
+          </div>
+          <a class="btn" target="_blank" href="https://wa.me/59162003756?text=Hola%20Zona%20Sport,%20quiero%20reservar%20el%20Nike%20Blazer%20Mid%2077%20Shanghai%20Pack">Reservar por WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="image-box">
+          <img src="nike_sport_performance_8_rosa.png" alt="Nike Sport Performance 880121-601">
+        </div>
+        <div class="info">
+          <div class="head">
+            <h3>Nike Sport Performance 880121-601</h3>
+            <span class="estado">Disponible</span>
+          </div>
+          <p class="desc">Tenis Nike deportivo rosado claro con swoosh negro, detalles coral y suela de tracción. Modelo identificado por etiqueta 880121-601.</p>
+          <div class="detail">
+            <p><strong>Talla:</strong> EUR 36.5 / US 6W / CM 23</p>
+            <p><strong>Color:</strong> Rosado claro / negro / coral</p>
+          </div>
+          <div class="price-row">
+            <span class="price">125 Bs</span>
+            <span class="stock">Stock: 1</span>
+          </div>
+          <a class="btn" target="_blank" href="https://wa.me/59162003756?text=Hola%20Zona%20Sport,%20quiero%20reservar%20el%20Nike%20Sport%20Performance%20880121-601">Reservar por WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="image-box">
+          <img src="nike_free_rn_flyknit_multicolor.png" alt="Nike Free RN Flyknit">
+        </div>
+        <div class="info">
+          <div class="head">
+            <h3>Nike Free RN Flyknit 831070-004</h3>
+            <span class="estado">Disponible</span>
+          </div>
+          <p class="desc">Tenis Nike Free RN Flyknit con tejido flexible, tonos oscuros y detalles multicolor. Cómodo, liviano y deportivo.</p>
+          <div class="detail">
+            <p><strong>Talla:</strong> EUR 38 / US 7 / CM 24</p>
+            <p><strong>Color:</strong> Negro / gris / multicolor</p>
+          </div>
+          <div class="price-row">
+            <span class="price">120 Bs</span>
+            <span class="stock">Stock: 1</span>
+          </div>
+          <a class="btn" target="_blank" href="https://wa.me/59162003756?text=Hola%20Zona%20Sport,%20quiero%20reservar%20el%20Nike%20Free%20RN%20Flyknit">Reservar por WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="image-box">
+          <img src="nike_flex_experience_rn_blanco_azul.png" alt="Nike Flex Experience RN 7">
+        </div>
+        <div class="info">
+          <div class="head">
+            <h3>Nike Flex Experience RN 7</h3>
+            <span class="estado">Disponible</span>
+          </div>
+          <p class="desc">Tenis Nike Flex Experience RN 7 color gris claro con swoosh azul marino. Diseño ligero, cómodo y flexible.</p>
+          <div class="detail">
+            <p><strong>Talla:</strong> EUR 44.5 / US 10.5 / CM 28.5</p>
+            <p><strong>Color:</strong> Gris claro / blanco / azul marino</p>
+          </div>
+          <div class="price-row">
+            <span class="price">125 Bs</span>
+            <span class="stock">Stock: 1</span>
+          </div>
+          <a class="btn" target="_blank" href="https://wa.me/59162003756?text=Hola%20Zona%20Sport,%20quiero%20reservar%20el%20Nike%20Flex%20Experience%20RN%207">Reservar por WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="image-box">
+          <img src="nike_low_dz4636_verde_beige.png" alt="Nike Low DZ4636-102">
+        </div>
+        <div class="info">
+          <div class="head">
+            <h3>Nike Low DZ4636-102</h3>
+            <span class="estado">Disponible</span>
+          </div>
+          <p class="desc">Tenis Nike de caña baja con combinación beige, blanco y verde, suela color caramelo y diseño casual urbano.</p>
+          <div class="detail">
+            <p><strong>Talla:</strong> Aprox. EUR 44 / US 10</p>
+            <p><strong>Color:</strong> Beige / blanco / verde / suela caramelo</p>
+          </div>
+          <div class="price-row">
+            <span class="price">125 Bs</span>
+            <span class="stock">Stock: 1</span>
+          </div>
+          <a class="btn" target="_blank" href="https://wa.me/59162003756?text=Hola%20Zona%20Sport,%20quiero%20reservar%20el%20Nike%20Low%20DZ4636-102">Reservar por WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="image-box">
+          <img src="fila_all_terrain_negro_fucsia.png" alt="Fila All Terrain">
+        </div>
+        <div class="info">
+          <div class="head">
+            <h3>Fila All Terrain</h3>
+            <span class="estado">Disponible</span>
+          </div>
+          <p class="desc">Tenis Fila All Terrain con diseño robusto, suela de tracción, detalles reflectivos y combinación negro, gris y fucsia.</p>
+          <div class="detail">
+            <p><strong>Talla:</strong> EUR 38</p>
+            <p><strong>Color:</strong> Negro / gris / fucsia</p>
+          </div>
+          <div class="price-row">
+            <span class="price">125 Bs</span>
+            <span class="stock">Stock: 1</span>
+          </div>
+          <a class="btn" target="_blank" href="https://wa.me/59162003756?text=Hola%20Zona%20Sport,%20quiero%20reservar%20el%20Fila%20All%20Terrain">Reservar por WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="image-box">
+          <img src="jordan_low_cv1304_rojo_blanco_negro.png" alt="Jordan Low CV1304-100">
+        </div>
+        <div class="info">
+          <div class="head">
+            <h3>Jordan Low CV1304-100</h3>
+            <span class="estado">Disponible</span>
+          </div>
+          <p class="desc">Tenis Jordan de caña baja con diseño rojo, blanco y negro. Estilo urbano, suela tono vintage y detalles metálicos laterales.</p>
+          <div class="detail">
+            <p><strong>Talla:</strong> EUR 40 / US 7.5 / CM 25</p>
+            <p><strong>Color:</strong> Rojo / blanco / negro</p>
+          </div>
+          <div class="price-row">
+            <span class="price">180 Bs</span>
+            <span class="stock">Stock: 1</span>
+          </div>
+          <a class="btn" target="_blank" href="https://wa.me/59162003756?text=Hola%20Zona%20Sport,%20quiero%20reservar%20el%20Jordan%20Low%20CV1304-100">Reservar por WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="image-box">
+          <img src="nike_air_blanco_azul_collage.png" alt="Nike Air CZ5358-101">
+        </div>
+        <div class="info">
+          <div class="head">
+            <h3>Nike Air CZ5358-101</h3>
+            <span class="estado">Disponible</span>
+          </div>
+          <p class="desc">Tenis Nike Air blanco con detalles grises y swoosh azul. Diseño urbano deportivo con unidad Air visible.</p>
+          <div class="detail">
+            <p><strong>Talla:</strong> EUR 36 / US 4Y / CM 23</p>
+            <p><strong>Color:</strong> Blanco / gris / azul</p>
+          </div>
+          <div class="price-row">
+            <span class="price">140 Bs</span>
+            <span class="stock">Stock: 1</span>
+          </div>
+          <a class="btn" target="_blank" href="https://wa.me/59162003756?text=Hola%20Zona%20Sport,%20quiero%20reservar%20el%20Nike%20Air%20CZ5358-101">Reservar por WhatsApp</a>
+        </div>
+      </article>
+
     </div>
+  </section>
 
-    <section class="cards-grid" id="productos"></section>
-  </main>
-
-  <section id="como-comprar" class="section steps">
-    <div class="section-header">
-      <p class="eyebrow">Proceso de compra</p>
-      <h2>Reserva fácil y segura</h2>
-      <p>Compra organizada por WhatsApp, registro de pedido y confirmación con QR.</p>
+  <section class="section steps" id="comprar">
+    <div class="title">
+      <h2 style="color:white;">¿Cómo comprar?</h2>
+      <p style="color:#d8d8d8;">Proceso simple, rápido y ordenado por WhatsApp.</p>
     </div>
 
     <div class="steps-grid">
-      <div class="step-card">
-        <span>01</span>
-        <h3>Consulta el catálogo</h3>
-        <p>Elige modelo, talla y color disponible.</p>
+      <div class="step">
+        <strong>1</strong>
+        <h3>Elige tu modelo</h3>
+        <p>Revisa el catálogo y selecciona el tenis que deseas reservar.</p>
       </div>
 
-      <div class="step-card">
-        <span>02</span>
-        <h3>Reserva por WhatsApp</h3>
-        <p>El bot registra tu pedido automáticamente.</p>
+      <div class="step">
+        <strong>2</strong>
+        <h3>Escribe por WhatsApp</h3>
+        <p>Presiona reservar y el mensaje se genera automáticamente.</p>
       </div>
 
-      <div class="step-card">
-        <span>03</span>
-        <h3>Confirma con QR</h3>
-        <p>Recibe el QR de pago y envía tu comprobante.</p>
+      <div class="step">
+        <strong>3</strong>
+        <h3>Recibe QR</h3>
+        <p>El bot registra tu reserva y te envía el QR de pago.</p>
       </div>
 
-      <div class="step-card">
-        <span>04</span>
-        <h3>Coordinamos entrega</h3>
-        <p>Un asesor confirma tu reserva y coordina la entrega.</p>
+      <div class="step">
+        <strong>4</strong>
+        <h3>Confirma tu pedido</h3>
+        <p>Envía el comprobante y un asesor confirma tu compra.</p>
       </div>
     </div>
   </section>
 
-  <section id="contacto" class="section contact">
-    <h2>Contacto y redes sociales</h2>
-    <p>
-      Síguenos en Facebook y escríbenos por WhatsApp para consultar modelos,
-      reservas, tallas, precios y entregas.
-    </p>
-
-    <div class="contact-buttons">
-      <a class="btn btn-primary" href="https://wa.me/59162003756?text=Hola%20Zona%20Sport%2C%20quiero%20informaci%C3%B3n%20del%20cat%C3%A1logo" target="_blank">
-        WhatsApp
-      </a>
-
-      <a class="btn facebook" href="https://www.facebook.com/profile.php?id=61591109313794" target="_blank">
-        Facebook
-      </a>
-
-      <a class="btn qr" href="https://raw.githubusercontent.com/luizagasamuel-a11y/TENIS-BO/main/qr_zona_sport_bnb.jpg" target="_blank">
-        Ver QR de pago
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    Zona Sport Cruceña Camba © 2026 · Tenis originales · Reservas por WhatsApp · Pagos QR
+  <footer id="contacto">
+    <h2>ZONA SPORT Cruceña Camba</h2>
+    <p>Catálogo digital conectado con WhatsApp, stock y automatización.</p>
+    <p>Santa Cruz de la Sierra · Bolivia</p>
   </footer>
-
-  <script>
-    const buscador = document.getElementById("buscador");
-    const contenedor = document.getElementById("productos");
-
-    let productosData = [];
-
-    async function cargarCatalogo() {
-      try {
-        const respuesta = await fetch("catalogo.json");
-
-        if (!respuesta.ok) {
-          throw new Error("No se encontró catalogo.json");
-        }
-
-        productosData = await respuesta.json();
-        mostrarProductos(productosData);
-      } catch (error) {
-        contenedor.innerHTML = `
-          <div class="empty-message">
-            No se pudo cargar el catálogo. Revisa que el archivo <strong>catalogo.json</strong> esté subido correctamente.
-          </div>
-        `;
-        console.error("Error cargando catálogo:", error);
-      }
-    }
-
-    function esImagen(url) {
-      if (!url) return false;
-      return url.startsWith("http") || url.endsWith(".jpg") || url.endsWith(".jpeg") || url.endsWith(".png") || url.endsWith(".webp");
-    }
-
-    function mostrarProductos(productos) {
-      contenedor.innerHTML = "";
-
-      if (!productos || productos.length === 0) {
-        contenedor.innerHTML = `
-          <div class="empty-message">
-            No encontramos productos con esa búsqueda. Escríbenos por WhatsApp para ayudarte.
-          </div>
-        `;
-        return;
-      }
-
-      productos.forEach(producto => {
-        const marca = producto.marca || "";
-        const modelo = producto.modelo || "";
-        const talla = producto.talla || "";
-        const color = producto.color || "";
-        const precio = producto.precio_bs || "Consultar";
-        const stock = producto.stock ?? "Consultar";
-        const estado = producto.estado || "Disponible";
-        const descripcion = producto.descripcion || "Tenis disponible en catálogo.";
-        const imagen = producto.imagen || "👟";
-
-        const textoWhatsApp = encodeURIComponent(
-          `Hola quiero reservar ${marca} ${modelo} talla ${talla}`
-        );
-
-        const imagenHTML = esImagen(imagen)
-          ? `<img src="${imagen}" alt="${marca} ${modelo}">`
-          : `<span>${imagen}</span>`;
-
-        const card = document.createElement("article");
-        card.className = "product-card";
-        card.dataset.search = `
-          ${marca}
-          ${modelo}
-          ${talla}
-          ${color}
-          ${estado}
-          ${descripcion}
-        `.toLowerCase();
-
-        card.innerHTML = `
-          <div class="product-image">
-            ${imagenHTML}
-          </div>
-
-          <div class="product-body">
-            <div class="product-top">
-              <div>
-                <h3>${marca} ${modelo}</h3>
-                <p class="desc">${descripcion}</p>
-              </div>
-              <span class="badge">${estado}</span>
-            </div>
-
-            <ul class="details">
-              <li><strong>Marca:</strong> <span>${marca}</span></li>
-              <li><strong>Talla:</strong> <span>${talla}</span></li>
-              <li><strong>Color:</strong> <span>${color}</span></li>
-              <li><strong>Stock:</strong> <span>${stock} pares</span></li>
-            </ul>
-
-            <div class="price">${precio} Bs</div>
-
-            <a class="reserve-btn" href="https://wa.me/59162003756?text=${textoWhatsApp}" target="_blank">
-              Reservar por WhatsApp
-            </a>
-          </div>
-        `;
-
-        contenedor.appendChild(card);
-      });
-    }
-
-    buscador.addEventListener("input", () => {
-      const texto = buscador.value.toLowerCase().trim();
-
-      const filtrados = productosData.filter(producto => {
-        return `
-          ${producto.marca}
-          ${producto.modelo}
-          ${producto.talla}
-          ${producto.color}
-          ${producto.estado}
-          ${producto.descripcion}
-        `.toLowerCase().includes(texto);
-      });
-
-      mostrarProductos(filtrados);
-    });
-
-    cargarCatalogo();
-  </script>
 
 </body>
 </html>
