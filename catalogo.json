@@ -1,14 +1,14 @@
 [
   {
     "marca": "Nike",
-    "modelo": "Blazer Mid 77 Pack",
+    "modelo": "Blazer Mid 77 Shanghai Pack",
     "talla": "EUR 44.5 / US 10.5 / CM 28.5",
     "color": "Plomo claro / verde menta / azul / naranja",
     "precio_bs": 250,
     "stock": 1,
     "estado": "Disponible",
-    "descripcion": "Tenis Nike de caña alta, estilo urbano premium, diseño multicolor con doble swoosh. Modelo identificado por etiqueta DC3278-280.",
-    "imagen": "https://luizagasamuel-a11y.github.io/TENIS-BO/nike_blazer.png"
+    "descripcion": "Tenis Nike Blazer Mid 77 Shanghai Pack de caña alta, estilo urbano premium, diseño multicolor con doble swoosh. Modelo identificado por etiqueta DC3278-280.",
+    "imagen": "nike_blazer_mid77_shang.png"
   },
   {
     "marca": "Nike",
@@ -19,18 +19,7 @@
     "stock": 1,
     "estado": "Disponible",
     "descripcion": "Tenis Nike deportivo rosado claro con swoosh negro, detalles coral y suela de tracción. Modelo identificado por etiqueta 880121-601.",
-    "imagen": "https://luizagasamuel-a11y.github.io/TENIS-BO/nike_sport_rosa.png"
-  },
-  {
-    "marca": "Jordan",
-    "modelo": "Jordan Low CV1304-100",
-    "talla": "EUR 40 / US 7.5 / CM 25",
-    "color": "Rojo / blanco / negro",
-    "precio_bs": 180,
-    "stock": 1,
-    "estado": "Disponible",
-    "descripcion": "Tenis Jordan de caña baja con diseño rojo, blanco y negro. Estilo urbano, suela tono vintage y detalles metálicos laterales.",
-    "imagen": "👟"
+    "imagen": "nike_sport_performance_8_rosa.png"
   },
   {
     "marca": "Nike",
@@ -40,8 +29,8 @@
     "precio_bs": 120,
     "stock": 1,
     "estado": "Disponible",
-    "descripcion": "Tenis Nike Free RN Flyknit con tejido flexible, tonos oscuros y detalles multicolor. Cómodo, liviano y deportivo.",
-    "imagen": "👟"
+    "descripcion": "Tenis Nike Free RN Flyknit con tejido flexible, tonos oscuros y detalles multicolor. Cómodo, liviano y deportivo para uso diario o entrenamiento ligero.",
+    "imagen": "nike_free_rn_flyknit_multicolor.png"
   },
   {
     "marca": "Nike",
@@ -51,19 +40,8 @@
     "precio_bs": 125,
     "stock": 1,
     "estado": "Disponible",
-    "descripcion": "Tenis Nike Flex Experience RN 7 color gris claro con swoosh azul marino. Diseño ligero, cómodo y flexible.",
-    "imagen": "👟"
-  },
-  {
-    "marca": "Fila",
-    "modelo": "All Terrain",
-    "talla": "EUR 38",
-    "color": "Negro / gris / fucsia",
-    "precio_bs": 125,
-    "stock": 1,
-    "estado": "Disponible",
-    "descripcion": "Tenis Fila All Terrain con diseño robusto, suela de tracción, detalles reflectivos y combinación negro, gris y fucsia.",
-    "imagen": "👟"
+    "descripcion": "Tenis Nike Flex Experience RN 7 color gris claro con swoosh azul marino. Diseño ligero, cómodo y flexible para uso casual, caminata o entrenamiento suave.",
+    "imagen": "nike_flex_experience_rn_blanco_azul.png"
   },
   {
     "marca": "Nike",
@@ -74,17 +52,39 @@
     "stock": 1,
     "estado": "Disponible",
     "descripcion": "Tenis Nike de caña baja con combinación beige, blanco y verde, suela color caramelo y diseño casual urbano. Modelo identificado por etiqueta DZ4636-102.",
-    "imagen": "👟"
+    "imagen": "nike_low_dz4636_verde_beige.png"
+  },
+  {
+    "marca": "Fila",
+    "modelo": "All Terrain",
+    "talla": "EUR 38",
+    "color": "Negro / gris / fucsia",
+    "precio_bs": 125,
+    "stock": 1,
+    "estado": "Disponible",
+    "descripcion": "Tenis Fila All Terrain con diseño robusto, suela de tracción, detalles reflectivos y combinación negro, gris y fucsia. Ideal para uso urbano deportivo y caminatas.",
+    "imagen": "fila_all_terrain_negro_fucsia.png"
+  },
+  {
+    "marca": "Jordan",
+    "modelo": "Jordan Low CV1304-100",
+    "talla": "EUR 40 / US 7.5 / CM 25",
+    "color": "Rojo / blanco / negro",
+    "precio_bs": 180,
+    "stock": 1,
+    "estado": "Disponible",
+    "descripcion": "Tenis Jordan de caña baja con diseño rojo, blanco y negro. Estilo urbano, suela tono vintage y detalles metálicos laterales.",
+    "imagen": "jordan_low_cv1304_rojo_blanco_negro.png"
   },
   {
     "marca": "Nike",
-    "modelo": "Dunk Low",
-    "talla": "EUR 42",
-    "color": "Blanco / negro",
+    "modelo": "Nike Air CZ5358-101",
+    "talla": "EUR 36 / US 4Y / CM 23",
+    "color": "Blanco / gris / azul",
     "precio_bs": 140,
     "stock": 1,
     "estado": "Disponible",
-    "descripcion": "Tenis Nike Dunk Low blanco y negro, estilo urbano clásico, combinable y de alta demanda para outfits casuales.",
-    "imagen": "👟"
+    "descripcion": "Tenis Nike Air blanco con detalles grises y swoosh azul. Diseño urbano deportivo con unidad Air visible. Modelo identificado por etiqueta CZ5358-101.",
+    "imagen": "nike_air_blanco_azul_collage.png"
   }
 ]
