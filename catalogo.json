@@ -8,7 +8,7 @@
     "stock": 1,
     "estado": "Disponible",
     "descripcion": "Tenis Nike de caña alta, estilo urbano premium, diseño multicolor con doble swoosh. Modelo identificado por etiqueta DC3278-280.",
-    "imagen": "👟"
+    "imagen": "https://raw.githubusercontent.com/luizagasamuel-a11y/TENIS-BO/principal/nike_blazer.png"
   },
   {
     "marca": "Nike",
@@ -19,7 +19,7 @@
     "stock": 1,
     "estado": "Disponible",
     "descripcion": "Tenis Nike deportivo rosado claro con swoosh negro, detalles coral y suela de tracción. Modelo identificado por etiqueta 880121-601.",
-    "imagen": "👟"
+    "imagen": "https://raw.githubusercontent.com/luizagasamuel-a11y/TENIS-BO/principal/nike_sport_rosa.png"
   },
   {
     "marca": "Jordan",
