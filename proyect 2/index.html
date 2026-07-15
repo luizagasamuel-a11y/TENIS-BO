@@ -1,76 +1,823 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>El Zapatón</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header class="hero">
-        <div class="hero-content">
-            <p class="eyebrow">Catálogo</p>
-            <h1>El Zapatón</h1>
-            <p>Descubre 10 tipos de zapatos para cada estilo: urbano, deportivo, casual y elegante.</p>
-            <div class="search-wrapper">
-                <input id="buscar" type="search" placeholder="Buscar zapatos..." aria-label="Buscar zapatos">
-            </div>
-        </div>
-    </header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <main class="catalogo">
-        <section class="cards-grid">
-            <article class="card">
-                <img class="card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120'%3E%3Crect width='160' height='120' rx='20' fill='%23e8f1fb'/%3E%3Cpath d='M24 72c10-15 30-20 50-16 20 3 42 18 54 14 6-2 10-9 12-14 4-14-8-30-26-30-18 0-29 14-43 20-14 6-27-8-41-6-12 1-17 12-23 16' fill='%232b6cb0'/%3E%3Cpath d='M17 78c14 8 62 14 119-4' stroke='%230f172a' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='52' cy='88' r='10' fill='%231d2939'/%3E%3C/svg%3E" alt="Icono de zapato">
-                <h2>1. Zapatillas Urbanas</h2>
-                <p>Comodidad diaria con diseño moderno para la ciudad.</p>
-            </article>
-            <article class="card">
-                <img class="card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120'%3E%3Crect width='160' height='120' rx='20' fill='%23e8f1fb'/%3E%3Cpath d='M24 72c10-15 30-20 50-16 20 3 42 18 54 14 6-2 10-9 12-14 4-14-8-30-26-30-18 0-29 14-43 20-14 6-27-8-41-6-12 1-17 12-23 16' fill='%232b6cb0'/%3E%3Cpath d='M17 78c14 8 62 14 119-4' stroke='%230f172a' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='52' cy='88' r='10' fill='%231d2939'/%3E%3C/svg%3E" alt="Icono de zapato">
-                <h2>2. Tenis Deportivos</h2>
-                <p>Soporte y amortiguación para entrenar con estilo.</p>
-            </article>
-            <article class="card">
-                <img class="card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120'%3E%3Crect width='160' height='120' rx='20' fill='%23e8f1fb'/%3E%3Cpath d='M24 72c10-15 30-20 50-16 20 3 42 18 54 14 6-2 10-9 12-14 4-14-8-30-26-30-18 0-29 14-43 20-14 6-27-8-41-6-12 1-17 12-23 16' fill='%232b6cb0'/%3E%3Cpath d='M17 78c14 8 62 14 119-4' stroke='%230f172a' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='52' cy='88' r='10' fill='%231d2939'/%3E%3C/svg%3E" alt="Icono de zapato">
-                <h2>3. Botas de Cuero</h2>
-                <p>Durabilidad y elegancia para calles y oficina.</p>
-            </article>
-            <article class="card">
-                <img class="card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120'%3E%3Crect width='160' height='120' rx='20' fill='%23e8f1fb'/%3E%3Cpath d='M24 72c10-15 30-20 50-16 20 3 42 18 54 14 6-2 10-9 12-14 4-14-8-30-26-30-18 0-29 14-43 20-14 6-27-8-41-6-12 1-17 12-23 16' fill='%232b6cb0'/%3E%3Cpath d='M17 78c14 8 62 14 119-4' stroke='%230f172a' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='52' cy='88' r='10' fill='%231d2939'/%3E%3C/svg%3E" alt="Icono de zapato">
-                <h2>4. Mocasines Clásicos</h2>
-                <p>Acabado suave para un look formal e informal.</p>
-            </article>
-            <article class="card">
-                <img class="card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120'%3E%3Crect width='160' height='120' rx='20' fill='%23e8f1fb'/%3E%3Cpath d='M24 72c10-15 30-20 50-16 20 3 42 18 54 14 6-2 10-9 12-14 4-14-8-30-26-30-18 0-29 14-43 20-14 6-27-8-41-6-12 1-17 12-23 16' fill='%232b6cb0'/%3E%3Cpath d='M17 78c14 8 62 14 119-4' stroke='%230f172a' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='52' cy='88' r='10' fill='%231d2939'/%3E%3C/svg%3E" alt="Icono de zapato">
-                <h2>5. Zapatos de Vestir</h2>
-                <p>Perfectos para eventos, trabajo y ocasiones especiales.</p>
-            </article>
-            <article class="card">
-                <img class="card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120'%3E%3Crect width='160' height='120' rx='20' fill='%23e8f1fb'/%3E%3Cpath d='M24 72c10-15 30-20 50-16 20 3 42 18 54 14 6-2 10-9 12-14 4-14-8-30-26-30-18 0-29 14-43 20-14 6-27-8-41-6-12 1-17 12-23 16' fill='%232b6cb0'/%3E%3Cpath d='M17 78c14 8 62 14 119-4' stroke='%230f172a' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='52' cy='88' r='10' fill='%231d2939'/%3E%3C/svg%3E" alt="Icono de zapato">
-                <h2>6. Sandalias Cómodas</h2>
-                <p>Ligereza y frescura para el verano y tiempo libre.</p>
-            </article>
-            <article class="card">
-                <img class="card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120'%3E%3Crect width='160' height='120' rx='20' fill='%23e8f1fb'/%3E%3Cpath d='M24 72c10-15 30-20 50-16 20 3 42 18 54 14 6-2 10-9 12-14 4-14-8-30-26-30-18 0-29 14-43 20-14 6-27-8-41-6-12 1-17 12-23 16' fill='%232b6cb0'/%3E%3Cpath d='M17 78c14 8 62 14 119-4' stroke='%230f172a' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='52' cy='88' r='10' fill='%231d2939'/%3E%3C/svg%3E" alt="Icono de zapato">
-                <h2>7. Zapatillas Minimalistas</h2>
-                <p>Estilo limpio con materiales suaves y paleta neutra.</p>
-            </article>
-            <article class="card">
-                <img class="card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120'%3E%3Crect width='160' height='120' rx='20' fill='%23e8f1fb'/%3E%3Cpath d='M24 72c10-15 30-20 50-16 20 3 42 18 54 14 6-2 10-9 12-14 4-14-8-30-26-30-18 0-29 14-43 20-14 6-27-8-41-6-12 1-17 12-23 16' fill='%232b6cb0'/%3E%3Cpath d='M17 78c14 8 62 14 119-4' stroke='%230f172a' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='52' cy='88' r='10' fill='%231d2939'/%3E%3C/svg%3E" alt="Icono de zapato">
-                <h2>8. Zapatos Náuticos</h2>
-                <p>Diseño clásico para actividades al aire libre y mar.</p>
-            </article>
-            <article class="card">
-                <img class="card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120'%3E%3Crect width='160' height='120' rx='20' fill='%23e8f1fb'/%3E%3Cpath d='M24 72c10-15 30-20 50-16 20 3 42 18 54 14 6-2 10-9 12-14 4-14-8-30-26-30-18 0-29 14-43 20-14 6-27-8-41-6-12 1-17 12-23 16' fill='%232b6cb0'/%3E%3Cpath d='M17 78c14 8 62 14 119-4' stroke='%230f172a' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='52' cy='88' r='10' fill='%231d2939'/%3E%3C/svg%3E" alt="Icono de zapato">
-                <h2>9. Deportivos de Trail</h2>
-                <p>Agarraderas resistentes para caminos montañosos.</p>
-            </article>
-            <article class="card">
-                <img class="card-img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.nvi_FvZML-xwsusiDB8UjgHaHb%3Fcb%3Dthfvnextfalcon2%26pid%3DApi&f=1&ipt=2a392265325254b94407b070babd0659170a0475d7cfb9674acff4c966e06915&ipo=images" alt="Slip-ons casual">
-                <h2>10. Slip-ons Casual</h2>
-                <p>Fáciles de usar y versátiles para el día a día.</p>
-            </article>
-        </section>
-    </main>
+  <title>Zona Sport Cruceña Camba | Catálogo</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f4f1eb;
+      color: #06120d;
+    }
+
+    header {
+      width: 100%;
+      background: #03110b;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo-circle {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2abf5a, #e2c83a);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: 900;
+      font-size: 28px;
+      border: 3px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .logo-text h1 {
+      font-size: 28px;
+      letter-spacing: 4px;
+      font-weight: 900;
+    }
+
+    .logo-text p {
+      color: #d8d8d8;
+      font-size: 18px;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 34px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+      opacity: 0.9;
+    }
+
+    nav a:hover {
+      color: #e2c83a;
+    }
+
+    .hero {
+      min-height: 590px;
+      background: linear-gradient(120deg, #062014, #244b38, #a25a55);
+      color: white;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      padding: 70px 7%;
+      align-items: center;
+    }
+
+    .hero-tag {
+      font-size: 24px;
+      letter-spacing: 12px;
+      font-weight: 900;
+      margin-bottom: 45px;
+    }
+
+    .hero h2 {
+      font-size: 74px;
+      line-height: 1.05;
+      max-width: 760px;
+      font-weight: 900;
+    }
+
+    .hero h2 span {
+      color: #e2c83a;
+    }
+
+    .hero p {
+      margin-top: 34px;
+      font-size: 24px;
+      line-height: 1.5;
+      max-width: 850px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 18px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 17px 30px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 18px;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn-secondary {
+      border: 2px solid rgba(255, 255, 255, 0.45);
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-card {
+      border-radius: 48px;
+      padding: 42px;
+      background: rgba(255, 255, 255, 0.11);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-image-box {
+      height: 360px;
+      border-radius: 34px;
+      background: #061c16;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-image-box::before {
+      content: "ZONA SPORT";
+      position: absolute;
+      font-size: 72px;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.04);
+      transform: rotate(-13deg);
+    }
+
+    .hero-image-box img {
+      max-width: 88%;
+      max-height: 88%;
+      object-fit: contain;
+      z-index: 2;
+      filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.45));
+      border-radius: 18px;
+      background: white;
+    }
+
+    .hero-icon {
+      font-size: 105px;
+      z-index: 2;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .stat {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 22px;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: #e2c83a;
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .stat span {
+      font-size: 16px;
+      color: white;
+    }
+
+    .section {
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 46px;
+      color: #07140e;
+      font-weight: 900;
+    }
+
+    .section-title p {
+      font-size: 20px;
+      color: #5b6570;
+      margin-top: 12px;
+    }
+
+    .catalogo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 34px;
+    }
+
+    .producto-card {
+      background: white;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      transition: 0.25s;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .producto-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
+    }
+
+    .producto-img-box {
+      height: 320px;
+      background: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .producto-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 10px;
+      display: block;
+      background: #f7f7f7;
+    }
+
+    .emoji-fallback {
+      font-size: 88px;
+      color: #7057c8;
+    }
+
+    .producto-info {
+      padding: 28px;
+    }
+
+    .producto-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .producto-head h3 {
+      font-size: 26px;
+      line-height: 1.2;
+      color: #04111f;
+      font-weight: 900;
+    }
+
+    .estado {
+      background: #d9fce5;
+      color: #076b2d;
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-weight: 900;
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    .estado.vendido,
+    .estado.agotado,
+    .estado.retirado {
+      background: #ffe0e0;
+      color: #9b1111;
+    }
+
+    .descripcion {
+      color: #5e6976;
+      font-size: 17px;
+      line-height: 1.45;
+      min-height: 96px;
+      margin-bottom: 18px;
+    }
+
+    .detalle {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-bottom: 18px;
+      color: #333333;
+      font-size: 16px;
+    }
+
+    .detalle strong {
+      color: #06120d;
+    }
+
+    .precio-linea {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 22px 0;
+      border-top: 1px solid #ececec;
+      padding-top: 18px;
+    }
+
+    .precio {
+      font-size: 28px;
+      font-weight: 900;
+      color: #0b6b35;
+    }
+
+    .stock {
+      color: #5e6976;
+      font-weight: 800;
+    }
+
+    .whatsapp-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #25d366;
+      color: white;
+      padding: 15px;
+      border-radius: 18px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 17px;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1db954;
+    }
+
+    .whatsapp-btn.disabled {
+      background: #999999;
+      pointer-events: none;
+    }
+
+    .como-comprar {
+      background: #06120d;
+      color: white;
+    }
+
+    .pasos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .paso {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 26px;
+      padding: 30px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .paso-num {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #e2c83a;
+      color: #06120d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 18px;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .paso h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .paso p {
+      color: #d8d8d8;
+      line-height: 1.45;
+      font-size: 16px;
+    }
+
+    footer {
+      background: #020806;
+      color: white;
+      text-align: center;
+      padding: 32px 7%;
+    }
+
+    footer p {
+      color: #d8d8d8;
+      margin-top: 8px;
+    }
+
+    .error-box {
+      background: #fff0f0;
+      color: #8b1111;
+      border: 1px solid #ffb4b4;
+      padding: 22px;
+      border-radius: 18px;
+      font-size: 18px;
+      text-align: center;
+      max-width: 900px;
+      margin: 30px auto;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 1050px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .catalogo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pasos {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h2 {
+        font-size: 58px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px 5%;
+      }
+
+      nav {
+        gap: 18px;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 50px 5%;
+      }
+
+      .hero-tag {
+        font-size: 18px;
+        letter-spacing: 7px;
+      }
+
+      .hero h2 {
+        font-size: 44px;
+      }
+
+      .hero p {
+        font-size: 19px;
+      }
+
+      .catalogo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pasos {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo-box">
+      <div class="logo-circle">ZS</div>
+      <div class="logo-text">
+        <h1>ZONA SPORT</h1>
+        <p>Cruceña Camba</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#comprar">Cómo comprar</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="hero-tag">TENIS ORIGINALES · ESTILO URBANO · BOLIVIA</div>
+
+      <h2>Tu estilo, <span>tu zona</span>, tu deporte.</h2>
+
+      <p>
+        Catálogo premium de tenis disponibles para reserva por WhatsApp.
+        Consulta modelos, tallas, colores y confirma tu pedido con QR.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#catalogo">Ver catálogo</a>
+        <a class="btn btn-secondary" href="https://wa.me/59162003756" target="_blank">Comprar por WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-image-box" id="heroImage">
+        <div class="hero-icon">👟</div>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>QR</strong>
+          <span>Pagos rápidos</span>
+        </div>
+        <div class="stat">
+          <strong>24/7</strong>
+          <span>WhatsApp</span>
+        </div>
+        <div class="stat">
+          <strong>100%</strong>
+          <span>Estilo urbano</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="catalogo">
+    <div class="section-title">
+      <h2>Catálogo disponible</h2>
+      <p>Modelos seleccionados para reserva inmediata.</p>
+    </div>
+
+    <div id="catalogoGrid" class="catalogo-grid"></div>
+    <div id="mensajeError"></div>
+  </section>
+
+  <section class="section como-comprar" id="comprar">
+    <div class="section-title">
+      <h2 style="color:white;">¿Cómo comprar?</h2>
+      <p style="color:#d8d8d8;">Proceso simple, rápido y ordenado por WhatsApp.</p>
+    </div>
+
+    <div class="pasos">
+      <div class="paso">
+        <div class="paso-num">1</div>
+        <h3>Elige tu modelo</h3>
+        <p>Revisa el catálogo y selecciona el tenis que deseas reservar.</p>
+      </div>
+
+      <div class="paso">
+        <div class="paso-num">2</div>
+        <h3>Escribe por WhatsApp</h3>
+        <p>Presiona comprar y el mensaje se genera automáticamente.</p>
+      </div>
+
+      <div class="paso">
+        <div class="paso-num">3</div>
+        <h3>Recibe QR</h3>
+        <p>El bot registra tu reserva y te envía el QR de pago.</p>
+      </div>
+
+      <div class="paso">
+        <div class="paso-num">4</div>
+        <h3>Confirma tu pedido</h3>
+        <p>Envía el comprobante y un asesor confirma tu compra.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <h2>ZONA SPORT Cruceña Camba</h2>
+    <p>Catálogo digital conectado con WhatsApp, stock y automatización.</p>
+    <p>Santa Cruz de la Sierra · Bolivia</p>
+  </footer>
+
+  <script>
+    const WHATSAPP = "59162003756";
+
+    const archivosCatalogo = [
+      "catalogo.json",
+      "catálogo.json"
+    ];
+
+    function limpiarTexto(valor) {
+      return String(valor || "").trim();
+    }
+
+    function normalizarEstado(estado) {
+      return limpiarTexto(estado).toLowerCase();
+    }
+
+    function rutaImagen(nombreImagen) {
+      const imagen = limpiarTexto(nombreImagen);
+
+      if (!imagen) {
+        return "";
+      }
+
+      if (imagen.startsWith("http://") || imagen.startsWith("https://")) {
+        return imagen;
+      }
+
+      return "./" + imagen;
+    }
+
+    function crearImagenHTML(producto) {
+      const imagen = rutaImagen(producto.imagen);
+      const alt = `${producto.marca || ""} ${producto.modelo || ""}`.trim();
+
+      if (!imagen) {
+        return `<div class="emoji-fallback">👟</div>`;
+      }
+
+      return `
+        <img
+          src="${imagen}"
+          alt="${alt}"
+          loading="lazy"
+          onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;emoji-fallback&quot;>👟</div>';"
+        >
+      `;
+    }
+
+    function mensajeWhatsApp(producto) {
+      const texto =
+`Hola Zona Sport, quiero reservar este modelo:
+
+Marca: ${producto.marca}
+Modelo: ${producto.modelo}
+Talla: ${producto.talla}
+Color: ${producto.color}
+Precio: ${producto.precio_bs} Bs
+
+¿Está disponible para compra?`;
+
+      return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
+    }
+
+    function crearCard(producto) {
+      const estado = normalizarEstado(producto.estado);
+
+      const noDisponible =
+        estado.includes("vendido") ||
+        estado.includes("agotado") ||
+        estado.includes("retirado") ||
+        Number(producto.stock || 0) <= 0;
+
+      const claseEstado = noDisponible
+        ? "estado vendido"
+        : "estado";
+
+      const textoEstado = limpiarTexto(producto.estado) || "Disponible";
+
+      const boton = noDisponible
+        ? `<a class="whatsapp-btn disabled">No disponible</a>`
+        : `<a class="whatsapp-btn" href="${mensajeWhatsApp(producto)}" target="_blank">Reservar por WhatsApp</a>`;
+
+      return `
+        <article class="producto-card">
+          <div class="producto-img-box">
+            ${crearImagenHTML(producto)}
+          </div>
+
+          <div class="producto-info">
+            <div class="producto-head">
+              <h3>${limpiarTexto(producto.marca)} ${limpiarTexto(producto.modelo)}</h3>
+              <span class="${claseEstado}">${textoEstado}</span>
+            </div>
+
+            <p class="descripcion">${limpiarTexto(producto.descripcion)}</p>
+
+            <div class="detalle">
+              <p><strong>Talla:</strong> ${limpiarTexto(producto.talla)}</p>
+              <p><strong>Color:</strong> ${limpiarTexto(producto.color)}</p>
+            </div>
+
+            <div class="precio-linea">
+              <span class="precio">${Number(producto.precio_bs || 0).toFixed(0)} Bs</span>
+              <span class="stock">Stock: ${producto.stock ?? 0}</span>
+            </div>
+
+            ${boton}
+          </div>
+        </article>
+      `;
+    }
+
+    async function cargarCatalogo() {
+      let productos = null;
+      let ultimoError = null;
+
+      for (const archivo of archivosCatalogo) {
+        try {
+          const respuesta = await fetch(`${archivo}?v=${Date.now()}`);
+
+          if (!respuesta.ok) {
+            throw new Error(`No se pudo cargar ${archivo}`);
+          }
+
+          productos = await respuesta.json();
+          break;
+        } catch (error) {
+          ultimoError = error;
+        }
+      }
+
+      if (!productos || !Array.isArray(productos)) {
+        throw ultimoError || new Error("Catálogo no válido");
+      }
+
+      return productos;
+    }
+
+    function cargarHero(productos) {
+      const hero = document.getElementById("heroImage");
+
+      const productoConImagen = productos.find(p => limpiarTexto(p.imagen));
+
+      if (!productoConImagen) {
+        hero.innerHTML = `<div class="hero-icon">👟</div>`;
+        return;
+      }
+
+      const imagen = rutaImagen(productoConImagen.imagen);
+
+      hero.innerHTML = `
+        <img
+          src="${imagen}"
+          alt="${productoConImagen.marca} ${productoConImagen.modelo}"
+          onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;hero-icon&quot;>👟</div>';"
+        >
+      `;
+    }
+
+    async function iniciarPagina() {
+      const grid = document.getElementById("catalogoGrid");
+      const errorBox = document.getElementById("mensajeError");
+
+      try {
+        const productos = await cargarCatalogo();
+
+        const productosOrdenados = productos.filter(p => {
+          const estado = normalizarEstado(p.estado);
+          return !estado.includes("retirado");
+        });
+
+        cargarHero(productosOrdenados);
+
+        grid.innerHTML = productosOrdenados.map(crearCard).join("");
+
+      } catch (error) {
+        console.error(error);
+
+        errorBox.innerHTML = `
+          <div class="error-box">
+            No se pudo cargar el catálogo. Revisa que exista el archivo
+            <strong>catalogo.json</strong> o <strong>catálogo.json</strong>
+            y que las imágenes estén subidas en la raíz del repositorio.
+          </div>
+        `;
+      }
+    }
+
+    iniciarPagina();
+  </script>
+
 </body>
 </html>
