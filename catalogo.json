@@ -1,90 +1,807 @@
-[
-  {
-    "marca": "Nike",
-    "modelo": "Blazer Mid 77 Shanghai Pack",
-    "talla": "EUR 44.5 / US 10.5 / CM 28.5",
-    "color": "Plomo claro / verde menta / azul / naranja",
-    "precio_bs": 250,
-    "stock": 1,
-    "estado": "Disponible",
-    "descripcion": "Tenis Nike Blazer Mid 77 Shanghai Pack de caña alta, estilo urbano premium, diseño multicolor con doble swoosh. Modelo identificado por etiqueta DC3278-280.",
-    "imagen": "nike_blazer_mid77_shang.png"
-  },
-  {
-    "marca": "Nike",
-    "modelo": "Sport Performance 880121-601",
-    "talla": "EUR 36.5 / US 6W / CM 23",
-    "color": "Rosado claro / negro / coral",
-    "precio_bs": 125,
-    "stock": 1,
-    "estado": "Disponible",
-    "descripcion": "Tenis Nike deportivo rosado claro con swoosh negro, detalles coral y suela de tracción. Modelo identificado por etiqueta 880121-601.",
-    "imagen": "nike_sport_performance_8_rosa.png"
-  },
-  {
-    "marca": "Nike",
-    "modelo": "Free RN Flyknit 831070-004",
-    "talla": "EUR 38 / US 7 / CM 24",
-    "color": "Negro / gris / multicolor",
-    "precio_bs": 120,
-    "stock": 1,
-    "estado": "Disponible",
-    "descripcion": "Tenis Nike Free RN Flyknit con tejido flexible, tonos oscuros y detalles multicolor. Cómodo, liviano y deportivo para uso diario o entrenamiento ligero.",
-    "imagen": "nike_free_rn_flyknit_multicolor.png"
-  },
-  {
-    "marca": "Nike",
-    "modelo": "Flex Experience RN 7",
-    "talla": "EUR 44.5 / US 10.5 / CM 28.5",
-    "color": "Gris claro / blanco / azul marino",
-    "precio_bs": 125,
-    "stock": 1,
-    "estado": "Disponible",
-    "descripcion": "Tenis Nike Flex Experience RN 7 color gris claro con swoosh azul marino. Diseño ligero, cómodo y flexible para uso casual, caminata o entrenamiento suave.",
-    "imagen": "nike_flex_experience_rn_blanco_azul.png"
-  },
-  {
-    "marca": "Nike",
-    "modelo": "Nike Low DZ4636-102",
-    "talla": "Aprox. EUR 44 / US 10",
-    "color": "Beige / blanco / verde / suela caramelo",
-    "precio_bs": 125,
-    "stock": 1,
-    "estado": "Disponible",
-    "descripcion": "Tenis Nike de caña baja con combinación beige, blanco y verde, suela color caramelo y diseño casual urbano. Modelo identificado por etiqueta DZ4636-102.",
-    "imagen": "nike_low_dz4636_verde_beige.png"
-  },
-  {
-    "marca": "Fila",
-    "modelo": "All Terrain",
-    "talla": "EUR 38",
-    "color": "Negro / gris / fucsia",
-    "precio_bs": 125,
-    "stock": 1,
-    "estado": "Disponible",
-    "descripcion": "Tenis Fila All Terrain con diseño robusto, suela de tracción, detalles reflectivos y combinación negro, gris y fucsia. Ideal para uso urbano deportivo y caminatas.",
-    "imagen": "fila_all_terrain_negro_fucsia.png"
-  },
-  {
-    "marca": "Jordan",
-    "modelo": "Jordan Low CV1304-100",
-    "talla": "EUR 40 / US 7.5 / CM 25",
-    "color": "Rojo / blanco / negro",
-    "precio_bs": 180,
-    "stock": 1,
-    "estado": "Disponible",
-    "descripcion": "Tenis Jordan de caña baja con diseño rojo, blanco y negro. Estilo urbano, suela tono vintage y detalles metálicos laterales.",
-    "imagen": "jordan_low_cv1304_rojo_blanco_negro.png"
-  },
-  {
-    "marca": "Nike",
-    "modelo": "Nike Air CZ5358-101",
-    "talla": "EUR 36 / US 4Y / CM 23",
-    "color": "Blanco / gris / azul",
-    "precio_bs": 140,
-    "stock": 1,
-    "estado": "Disponible",
-    "descripcion": "Tenis Nike Air blanco con detalles grises y swoosh azul. Diseño urbano deportivo con unidad Air visible. Modelo identificado por etiqueta CZ5358-101.",
-    "imagen": "nike_air_blanco_azul_collage.png"
-  }
-]
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zona Sport Cruceña Camba | Catálogo</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f4f1eb;
+      color: #06120d;
+    }
+
+    header {
+      width: 100%;
+      background: #03110b;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo-circle {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2abf5a, #e2c83a);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: 900;
+      font-size: 28px;
+      border: 3px solid rgba(255,255,255,0.25);
+    }
+
+    .logo-text h1 {
+      font-size: 28px;
+      letter-spacing: 4px;
+      font-weight: 900;
+    }
+
+    .logo-text p {
+      color: #d8d8d8;
+      font-size: 18px;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 34px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+      opacity: 0.9;
+    }
+
+    nav a:hover {
+      color: #e2c83a;
+    }
+
+    .hero {
+      min-height: 590px;
+      background: linear-gradient(120deg, #062014, #244b38, #a25a55);
+      color: white;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      padding: 70px 7%;
+      align-items: center;
+    }
+
+    .hero-tag {
+      font-size: 24px;
+      letter-spacing: 12px;
+      font-weight: 900;
+      margin-bottom: 45px;
+    }
+
+    .hero h2 {
+      font-size: 74px;
+      line-height: 1.05;
+      max-width: 760px;
+      font-weight: 900;
+    }
+
+    .hero h2 span {
+      color: #e2c83a;
+    }
+
+    .hero p {
+      margin-top: 34px;
+      font-size: 24px;
+      line-height: 1.5;
+      max-width: 850px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 18px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 17px 30px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 18px;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn-secondary {
+      border: 2px solid rgba(255,255,255,0.45);
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .hero-card {
+      border-radius: 48px;
+      padding: 42px;
+      background: rgba(255,255,255,0.11);
+      border: 1px solid rgba(255,255,255,0.18);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-image-box {
+      height: 360px;
+      border-radius: 34px;
+      background: #061c16;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-image-box::before {
+      content: "ZONA SPORT";
+      position: absolute;
+      font-size: 72px;
+      font-weight: 900;
+      color: rgba(255,255,255,0.04);
+      transform: rotate(-13deg);
+    }
+
+    .hero-image-box img {
+      max-width: 88%;
+      max-height: 88%;
+      object-fit: contain;
+      z-index: 2;
+      filter: drop-shadow(0 18px 26px rgba(0,0,0,0.45));
+      border-radius: 18px;
+    }
+
+    .hero-icon {
+      font-size: 105px;
+      z-index: 2;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.12);
+      border-radius: 22px;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: #e2c83a;
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .stat span {
+      font-size: 16px;
+      color: white;
+    }
+
+    .section {
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 46px;
+      color: #07140e;
+      font-weight: 900;
+    }
+
+    .section-title p {
+      font-size: 20px;
+      color: #5b6570;
+      margin-top: 12px;
+    }
+
+    .catalogo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 34px;
+    }
+
+    .producto-card {
+      background: white;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      transition: 0.25s;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .producto-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 18px 38px rgba(0,0,0,0.18);
+    }
+
+    .producto-img-box {
+      height: 320px;
+      background: linear-gradient(135deg, #081421, #07341f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .producto-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #f7f7f7;
+      padding: 10px;
+      display: block;
+    }
+
+    .emoji-fallback {
+      font-size: 88px;
+      color: white;
+    }
+
+    .producto-info {
+      padding: 28px;
+    }
+
+    .producto-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .producto-head h3 {
+      font-size: 26px;
+      line-height: 1.2;
+      color: #04111f;
+      font-weight: 900;
+    }
+
+    .estado {
+      background: #d9fce5;
+      color: #076b2d;
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-weight: 900;
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    .estado.vendido,
+    .estado.agotado,
+    .estado.retirado {
+      background: #ffe0e0;
+      color: #9b1111;
+    }
+
+    .descripcion {
+      color: #5e6976;
+      font-size: 17px;
+      line-height: 1.45;
+      min-height: 96px;
+      margin-bottom: 18px;
+    }
+
+    .detalle {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-bottom: 18px;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .detalle strong {
+      color: #06120d;
+    }
+
+    .precio-linea {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 22px 0;
+      border-top: 1px solid #ececec;
+      padding-top: 18px;
+    }
+
+    .precio {
+      font-size: 28px;
+      font-weight: 900;
+      color: #0b6b35;
+    }
+
+    .stock {
+      color: #5e6976;
+      font-weight: 800;
+    }
+
+    .whatsapp-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #25d366;
+      color: white;
+      padding: 15px;
+      border-radius: 18px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 17px;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1db954;
+    }
+
+    .como-comprar {
+      background: #06120d;
+      color: white;
+    }
+
+    .pasos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .paso {
+      background: rgba(255,255,255,0.08);
+      border-radius: 26px;
+      padding: 30px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .paso-num {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #e2c83a;
+      color: #06120d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 18px;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .paso h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .paso p {
+      color: #d8d8d8;
+      line-height: 1.45;
+      font-size: 16px;
+    }
+
+    footer {
+      background: #020806;
+      color: white;
+      text-align: center;
+      padding: 32px 7%;
+    }
+
+    footer p {
+      color: #d8d8d8;
+      margin-top: 8px;
+    }
+
+    .error-box {
+      background: #fff0f0;
+      color: #8b1111;
+      border: 1px solid #ffb4b4;
+      padding: 22px;
+      border-radius: 18px;
+      font-size: 18px;
+      text-align: center;
+      max-width: 900px;
+      margin: 30px auto;
+    }
+
+    @media (max-width: 1050px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .catalogo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pasos {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h2 {
+        font-size: 58px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px 5%;
+      }
+
+      nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 50px 5%;
+      }
+
+      .hero-tag {
+        font-size: 18px;
+        letter-spacing: 7px;
+      }
+
+      .hero h2 {
+        font-size: 44px;
+      }
+
+      .hero p {
+        font-size: 19px;
+      }
+
+      .catalogo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pasos {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo-box">
+      <div class="logo-circle">ZS</div>
+      <div class="logo-text">
+        <h1>ZONA SPORT</h1>
+        <p>Cruceña Camba</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#comprar">Cómo comprar</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="hero-tag">TENIS ORIGINALES · ESTILO URBANO · BOLIVIA</div>
+
+      <h2>Tu estilo, <span>tu zona</span>, tu deporte.</h2>
+
+      <p>
+        Catálogo premium de tenis disponibles para reserva por WhatsApp.
+        Consulta modelos, tallas, colores y confirma tu pedido con QR.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#catalogo">Ver catálogo</a>
+        <a class="btn btn-secondary" href="https://wa.me/59162003756" target="_blank">Comprar por WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-image-box" id="heroImage">
+        <div class="hero-icon">👟</div>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>QR</strong>
+          <span>Pagos rápidos</span>
+        </div>
+        <div class="stat">
+          <strong>24/7</strong>
+          <span>WhatsApp</span>
+        </div>
+        <div class="stat">
+          <strong>100%</strong>
+          <span>Estilo urbano</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="catalogo">
+    <div class="section-title">
+      <h2>Catálogo disponible</h2>
+      <p>Modelos seleccionados para reserva inmediata.</p>
+    </div>
+
+    <div id="catalogoGrid" class="catalogo-grid"></div>
+    <div id="mensajeError"></div>
+  </section>
+
+  <section class="section como-comprar" id="comprar">
+    <div class="section-title">
+      <h2 style="color:white;">¿Cómo comprar?</h2>
+      <p style="color:#d8d8d8;">Proceso simple, rápido y ordenado por WhatsApp.</p>
+    </div>
+
+    <div class="pasos">
+      <div class="paso">
+        <div class="paso-num">1</div>
+        <h3>Elige tu modelo</h3>
+        <p>Revisa el catálogo y selecciona el tenis que deseas reservar.</p>
+      </div>
+
+      <div class="paso">
+        <div class="paso-num">2</div>
+        <h3>Escribe por WhatsApp</h3>
+        <p>Presiona comprar y el mensaje se genera automáticamente.</p>
+      </div>
+
+      <div class="paso">
+        <div class="paso-num">3</div>
+        <h3>Recibe QR</h3>
+        <p>El bot registra tu reserva y te envía el QR de pago.</p>
+      </div>
+
+      <div class="paso">
+        <div class="paso-num">4</div>
+        <h3>Confirma tu pedido</h3>
+        <p>Envía el comprobante y un asesor confirma tu compra.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <h2>ZONA SPORT Cruceña Camba</h2>
+    <p>Catálogo digital conectado con WhatsApp, stock y automatización.</p>
+    <p>Santa Cruz de la Sierra · Bolivia</p>
+  </footer>
+
+  <script>
+    const WHATSAPP = "59162003756";
+
+    const archivosCatalogo = [
+      "catálogo.json",
+      "catalogo.json"
+    ];
+
+    function limpiarTexto(valor) {
+      return String(valor || "").trim();
+    }
+
+    function normalizarEstado(estado) {
+      return limpiarTexto(estado).toLowerCase();
+    }
+
+    function rutaImagen(nombreImagen) {
+      const imagen = limpiarTexto(nombreImagen);
+
+      if (!imagen) {
+        return "";
+      }
+
+      if (imagen.startsWith("http://") || imagen.startsWith("https://")) {
+        return imagen;
+      }
+
+      return "./" + imagen;
+    }
+
+    function crearImagenHTML(producto) {
+      const imagen = rutaImagen(producto.imagen);
+      const alt = `${producto.marca || ""} ${producto.modelo || ""}`.trim();
+
+      if (!imagen) {
+        return `<div class="emoji-fallback">👟</div>`;
+      }
+
+      return `
+        <img 
+          src="${imagen}" 
+          alt="${alt}" 
+          loading="lazy"
+          onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;emoji-fallback&quot;>👟</div>';"
+        >
+      `;
+    }
+
+    function mensajeWhatsApp(producto) {
+      const texto = 
+`Hola Zona Sport, quiero reservar este modelo:
+
+Marca: ${producto.marca}
+Modelo: ${producto.modelo}
+Talla: ${producto.talla}
+Color: ${producto.color}
+Precio: ${producto.precio_bs} Bs
+
+¿Está disponible para compra?`;
+
+      return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
+    }
+
+    function crearCard(producto) {
+      const estado = normalizarEstado(producto.estado);
+      const claseEstado = estado.includes("vendido") || estado.includes("agotado") || estado.includes("retirado")
+        ? "estado vendido"
+        : "estado";
+
+      const disponible = !(estado.includes("vendido") || estado.includes("agotado") || estado.includes("retirado"));
+
+      const boton = disponible
+        ? `<a class="whatsapp-btn" href="${mensajeWhatsApp(producto)}" target="_blank">Reservar por WhatsApp</a>`
+        : `<a class="whatsapp-btn" style="background:#999; pointer-events:none;">No disponible</a>`;
+
+      return `
+        <article class="producto-card">
+          <div class="producto-img-box">
+            ${crearImagenHTML(producto)}
+          </div>
+
+          <div class="producto-info">
+            <div class="producto-head">
+              <h3>${limpiarTexto(producto.marca)} ${limpiarTexto(producto.modelo)}</h3>
+              <span class="${claseEstado}">${limpiarTexto(producto.estado) || "Disponible"}</span>
+            </div>
+
+            <p class="descripcion">${limpiarTexto(producto.descripcion)}</p>
+
+            <div class="detalle">
+              <p><strong>Talla:</strong> ${limpiarTexto(producto.talla)}</p>
+              <p><strong>Color:</strong> ${limpiarTexto(producto.color)}</p>
+            </div>
+
+            <div class="precio-linea">
+              <span class="precio">${Number(producto.precio_bs || 0).toFixed(0)} Bs</span>
+              <span class="stock">Stock: ${producto.stock ?? 0}</span>
+            </div>
+
+            ${boton}
+          </div>
+        </article>
+      `;
+    }
+
+    async function cargarCatalogo() {
+      let productos = null;
+      let ultimoError = null;
+
+      for (const archivo of archivosCatalogo) {
+        try {
+          const respuesta = await fetch(`${archivo}?v=${Date.now()}`);
+
+          if (!respuesta.ok) {
+            throw new Error(`No se pudo cargar ${archivo}`);
+          }
+
+          productos = await respuesta.json();
+          break;
+        } catch (error) {
+          ultimoError = error;
+        }
+      }
+
+      if (!productos || !Array.isArray(productos)) {
+        throw ultimoError || new Error("Catálogo no válido");
+      }
+
+      return productos;
+    }
+
+    function cargarHero(productos) {
+      const hero = document.getElementById("heroImage");
+
+      const productoConImagen = productos.find(p => limpiarTexto(p.imagen));
+
+      if (!productoConImagen) {
+        hero.innerHTML = `<div class="hero-icon">👟</div>`;
+        return;
+      }
+
+      const imagen = rutaImagen(productoConImagen.imagen);
+
+      hero.innerHTML = `
+        <img 
+          src="${imagen}" 
+          alt="${productoConImagen.marca} ${productoConImagen.modelo}"
+          onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;hero-icon&quot;>👟</div>';"
+        >
+      `;
+    }
+
+    async function iniciarPagina() {
+      const grid = document.getElementById("catalogoGrid");
+      const errorBox = document.getElementById("mensajeError");
+
+      try {
+        const productos = await cargarCatalogo();
+
+        const productosOrdenados = productos.filter(p => {
+          const estado = normalizarEstado(p.estado);
+          return !estado.includes("retirado");
+        });
+
+        cargarHero(productosOrdenados);
+
+        grid.innerHTML = productosOrdenados.map(crearCard).join("");
+
+      } catch (error) {
+        console.error(error);
+
+        errorBox.innerHTML = `
+          <div class="error-box">
+            No se pudo cargar el catálogo. Revisa que exista el archivo 
+            <strong>catálogo.json</strong> o <strong>catalogo.json</strong> 
+            y que las imágenes estén subidas en la raíz del repositorio.
+          </div>
+        `;
+      }
+    }
+
+    iniciarPagina();
+  </script>
+
+</body>
+</html>
