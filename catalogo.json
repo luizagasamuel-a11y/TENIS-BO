@@ -1,14 +1,14 @@
 [
   {
     "marca": "Nike",
-    "modelo": "Blazer Mid 77 Shanghai Pack",
+    "modelo": "Blazer Mid 77 Pack",
     "talla": "EUR 44.5 / US 10.5 / CM 28.5",
     "color": "Plomo claro / verde menta / azul / naranja",
     "precio_bs": 250,
     "stock": 1,
     "estado": "Disponible",
     "descripcion": "Tenis Nike de caña alta, estilo urbano premium, diseño multicolor con doble swoosh. Modelo identificado por etiqueta DC3278-280.",
-    "imagen": "https://raw.githubusercontent.com/luizagasamuel-a11y/TENIS-BO/principal/nike_blazer.png"
+    "imagen": "https://luizagasamuel-a11y.github.io/TENIS-BO/nike_blazer.png"
   },
   {
     "marca": "Nike",
@@ -19,7 +19,7 @@
     "stock": 1,
     "estado": "Disponible",
     "descripcion": "Tenis Nike deportivo rosado claro con swoosh negro, detalles coral y suela de tracción. Modelo identificado por etiqueta 880121-601.",
-    "imagen": "https://raw.githubusercontent.com/luizagasamuel-a11y/TENIS-BO/principal/nike_sport_rosa.png"
+    "imagen": "https://luizagasamuel-a11y.github.io/TENIS-BO/nike_sport_rosa.png"
   },
   {
     "marca": "Jordan",
