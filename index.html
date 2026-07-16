@@ -28,6 +28,7 @@
       position: sticky;
       top: 0;
       z-index: 20;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
     }
 
     .logo {
@@ -72,6 +73,10 @@
       font-size: 18px;
     }
 
+    nav a:hover {
+      color: #e2c83a;
+    }
+
     .hero {
       background: linear-gradient(120deg, #062014, #244b38, #a25a55);
       color: white;
@@ -105,6 +110,38 @@
       font-size: 24px;
       line-height: 1.5;
       margin-top: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 18px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 16px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 17px;
+      transition: 0.2s;
+    }
+
+    .hero-btn-primary {
+      background: #25d366;
+      color: white;
+    }
+
+    .hero-btn-secondary {
+      border: 2px solid rgba(255,255,255,0.5);
+      color: white;
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
 
     .hero-card {
@@ -155,6 +192,12 @@
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0,0,0,0.12);
       border: 1px solid rgba(0,0,0,0.06);
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 38px rgba(0,0,0,0.18);
     }
 
     .image-box {
@@ -198,6 +241,7 @@
       border-radius: 20px;
       font-weight: 900;
       white-space: nowrap;
+      font-size: 15px;
     }
 
     .desc {
@@ -248,6 +292,10 @@
       font-size: 17px;
     }
 
+    .btn:hover {
+      background: #1db954;
+    }
+
     .steps {
       background: #06120d;
       color: white;
@@ -265,6 +313,7 @@
       padding: 28px;
       border-radius: 24px;
       text-align: center;
+      border: 1px solid rgba(255,255,255,0.12);
     }
 
     .step strong {
@@ -288,6 +337,70 @@
     .step p {
       color: #d8d8d8;
       line-height: 1.4;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 35px;
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: 26px;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .contact-card h3 {
+      font-size: 26px;
+      margin-bottom: 12px;
+      color: #04111f;
+    }
+
+    .contact-card p {
+      color: #5e6976;
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.45;
+    }
+
+    .facebook-btn {
+      display: inline-block;
+      background: #1877f2;
+      color: white;
+      padding: 14px 26px;
+      border-radius: 18px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 17px;
+    }
+
+    .contact-whatsapp-btn {
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      padding: 14px 26px;
+      border-radius: 18px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 17px;
+    }
+
+    .social-note {
+      margin-top: 35px;
+      background: #fff8db;
+      border: 1px solid #ead26a;
+      color: #4c3d00;
+      padding: 22px;
+      border-radius: 22px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.5;
+      font-weight: 700;
     }
 
     footer {
@@ -346,6 +459,10 @@
       .steps-grid {
         grid-template-columns: 1fr;
       }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -376,6 +493,11 @@
         Catálogo premium de tenis disponibles para reserva por WhatsApp.
         Consulta modelos, tallas, colores y confirma tu pedido con QR.
       </p>
+
+      <div class="hero-buttons">
+        <a class="hero-btn hero-btn-primary" href="#catalogo">Ver catálogo</a>
+        <a class="hero-btn hero-btn-secondary" href="#contacto">Contactar ahora</a>
+      </div>
     </div>
 
     <div class="hero-card">
@@ -603,10 +725,40 @@
     </div>
   </section>
 
-  <footer id="contacto">
+  <section class="section" id="contacto">
+    <div class="title">
+      <h2>Contacto oficial</h2>
+      <p>Comunícate con Zona Sport Cruceña Camba por nuestros canales oficiales.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>WhatsApp</h3>
+        <p>Atención rápida para reservas, consultas y confirmación de pedidos.</p>
+        <a class="contact-whatsapp-btn" href="https://wa.me/59162003756" target="_blank">
+          Escribir por WhatsApp
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <h3>Facebook</h3>
+        <p>Sigue nuestra página para ver novedades, modelos disponibles y publicaciones.</p>
+        <a class="facebook-btn" href="https://www.facebook.com/profile.php?id=61591109313794" target="_blank">
+          Ver página de Facebook
+        </a>
+      </div>
+    </div>
+
+    <div class="social-note">
+      WhatsApp oficial: 62003756 · Facebook: Zona Sport Cruceña Camba · Santa Cruz de la Sierra, Bolivia
+    </div>
+  </section>
+
+  <footer>
     <h2>ZONA SPORT Cruceña Camba</h2>
     <p>Catálogo digital conectado con WhatsApp, stock y automatización.</p>
-    <p>Santa Cruz de la Sierra · Bolivia</p>
+    <p>WhatsApp: 62003756 · Santa Cruz de la Sierra, Bolivia</p>
+    <p>Facebook: Zona Sport Cruceña Camba</p>
   </footer>
 
 </body>
